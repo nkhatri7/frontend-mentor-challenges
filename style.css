@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/pattern-background-desktop.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+    margin: 0;
+    color: black;
+}
+
+.order-summary-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    max-width: 23rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 15px 20px -15px hsl(224, 23%, 55%);
+}
+
+.graphic > img {
+    max-width: 23rem;
+    border-radius: 15px 15px 0 0;
+}
+
+.order-summary {
+    padding-top: 0.7rem;
+}
+
+.order-summary > h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+}
+
+.order-summary > p {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    max-width: 18rem;
+    color: hsl(224, 23%, 55%);;
+}
+
+.annual-plan {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    margin-top: 1.3rem;
+}
+
+.plan-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-right: 4.9rem;
+}
+
+.icon {
+    padding: 1.3rem 1rem 0.8rem 1rem;
+}
+
+.icon > img {
+    max-width: 2.4rem;
+}
+
+.plan-details > #annual-plan-text {
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: rgb(16, 28, 70);
+    margin-bottom: 0.2rem;
+}
+
+.plan-details > #plan-price {
+    font-size: 0.8rem;
+    color: rgb(138, 141, 165);
+    margin-top: 0;
+}
+
+.change-link > a {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: hsl(228, 45%, 44%);
+}
+
+.change-link > a:hover {
+    color: #746CEA;
+    text-decoration: none;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+}
+
+#payment-button, #cancel-button {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+#payment-button {
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 0.65rem;
+    box-shadow: 0px 15px 10px rgba(67, 40, 216, 0.17);
+    margin-bottom: 1.4rem;  
+}
+
+#cancel-button {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(138, 141, 165);
+    margin-bottom: 2.3rem;
+    color: hsl(224, 23%, 55%);
+}
+
+#payment-button:hover, #cancel-button:hover {
+    cursor: pointer;
+}
+
+#payment-button:hover {
+    background-color: #746CEA;
+}
+
+#cancel-button:hover {
+    color: hsl(223, 47%, 23%);
+}
