@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-signup-form-using-calc-gvIOGzFCV)
+- Live Site URL: [Live Site](https://signup-form-brown.vercel.app/)
 
 ## My process
 
