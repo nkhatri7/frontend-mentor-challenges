@@ -2,79 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="mobile.css">
+
+  <script type="text/javascript" src="script.js"></script>
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="page-wrapper">
+    <div class="main-content">
+      <div class="main-block">
+        <div class="profile">
+          <figure>
+            <img src="./images/image-jeremy.png" alt="Photo of Jeremy Robson" class="profile-image">
+          </figure>
+          <div class="profile-details">
+            <p>Report for</p>
+            <p id="user-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="period-buttons">
+          <button data-period="daily" class="time-period-button">Daily</button>
+          <button data-period="weekly" class="time-period-button active-period">Weekly</button>
+          <button data-period="monthly" class="time-period-button">Monthly</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="grid-block" id="work-block">
+          <img src="./images/icon-work.svg" alt="Work Icon" class="block-icon">
+          <div class="text-block">
+            <div class="top-section">
+              <p class="section-name">Work</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" class="ellipsis">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="hours-section">
+              <p class="hours" id="work-hours" data-activity="Work"></p>
+              <p class="previous-hours" id="previous-work-hours" data-activity="Work"></p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block" id="play-block">
+          <img src="./images/icon-play.svg" alt="Controller Icon" class="block-icon">
+          <div class="text-block">
+            <div class="top-section">
+              <p class="section-name">Play</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" class="ellipsis">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="hours-section">
+              <p class="hours" id="play-hours" data-activity="Play"></p>
+              <p class="previous-hours" id="previous-play-hours" data-activity="Play"></p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block" id="study-block">
+          <img src="./images/icon-study.svg" alt="Book Icon" class="block-icon">
+          <div class="text-block">
+            <div class="top-section">
+              <p class="section-name">Study</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" class="ellipsis">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="hours-section">
+              <p class="hours" id="study-hours" data-activity="Study"></p>
+              <p class="previous-hours" id="previous-study-hours" data-activity="Study"></p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block" id="exercise-block">
+          <img src="./images/icon-exercise.svg" alt="Running Man Icon" class="block-icon">
+          <div class="text-block">
+            <div class="top-section">
+              <p class="section-name">Exercise</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" class="ellipsis">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="hours-section">
+              <p class="hours" id="exercise-hours" data-activity="Exercise"></p>
+              <p class="previous-hours" id="previous-exercise-hours" data-activity="Exercise"></p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-block" id="social-block">
+          <img src="./images/icon-social.svg" alt="Messaging Icon" class="block-icon">
+          <div class="text-block">
+            <div class="top-section">
+              <p class="section-name">Social</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" class="ellipsis">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="hours-section">
+              <p class="hours" id="social-hours" data-activity="Social"></p>
+              <p class="previous-hours" id="previous-social-hours" data-activity="Social"></p>
+            </div> 
+          </div>
+        </div>
+        <div class="grid-block" id="self-care-block">
+          <img src="./images/icon-self-care.svg" alt="Health Icon" class="block-icon">
+          <div class="text-block">
+            <div class="top-section">
+              <p class="section-name">Self Care</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" class="ellipsis">
+                <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" 
+                fill="#BBC0FF" fill-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="hours-section">
+              <p class="hours" id="self-care-hours" data-activity="Self Care"></p>
+              <p class="previous-hours" id="previous-self-care-hours" data-activity="Self Care"></p>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/nkhatri7" target="_blank">Neil Khatri</a>.
+    </div>
   </div>
 </body>
 </html>

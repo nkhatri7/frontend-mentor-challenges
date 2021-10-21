@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    background-size: cover;
+    background-position: cover;
+    position: relative;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.main-block {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    max-width: calc(10rem + 6vw);
+    margin-right: 1.5rem;
+}
+
+.profile {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 10px;
+    padding: 2rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.profile > figure {
+    padding-bottom: 2.25rem;
+}
+
+.profile-image {
+    max-width: 4rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+#user-name {
+    font-size: 2rem;
+    padding: 0 2.5rem 2.8rem 0;
+}
+
+.period-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-period-button {
+    background-color: transparent;
+    border-color: transparent;
+    color: hsl(235, 45%, 61%);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+    padding: 5px 0 5px 20px;
+}
+
+.active-period {
+    color: white;
+}
+
+.time-period-button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc(10rem + 5vw));
+    grid-template-rows: repeat(2, calc(8.5rem + 5vw));
+    gap: 1.5rem;
+}
+
+.grid-block {
+    border-radius: 10px;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-icon {
+    max-width: 4rem;
+    position: absolute;
+    top: -0.15rem;
+    right: 0.8rem;
+}
+
+.text-block {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.text-block:hover {
+    background-color: hsl(235, 45%, 41%);
+    cursor: pointer;
+}
+
+.ellipsis:hover, .ellipsis:hover path {
+    cursor: pointer;
+    fill: white;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.section-name {
+    font-size: 18px;
+}
+
+.hours {
+    font-weight: 300;
+    font-size: 3rem;
+    padding-top: 1.2rem;
+}
+
+.previous-hours {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: hsl(236, 100%, 87%);
+    padding: 0.3rem 0 0.5rem 0;
+}
+
+#work-block {
+    background-color: hsl(15, 100%, 70%);
+}
+
+#play-block {
+    background-color: hsl(195, 74%, 62%);
+}
+
+#study-block {
+    background-color: hsl(348, 100%, 68%);
+}
+
+#exercise-block {
+    background-color: hsl(145, 58%, 55%);
+}
+
+#social-block {
+    background-color: hsl(264, 64%, 52%);
+}
+
+#self-care-block {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(236, 100%, 87%); 
+}

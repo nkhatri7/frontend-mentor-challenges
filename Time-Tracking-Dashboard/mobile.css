@@ -1,0 +1,74 @@
+@media screen and (max-width: 500px) {
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 0;
+        top: 0pt;
+        left: 0pt;
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .main-content {
+        flex-direction: column;
+        margin-top: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-block {
+        min-width: 90vw;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile > figure {
+        padding: 0 1.5rem 0 0;
+    }
+
+    #user-name {
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    .period-buttons {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .time-period-button {
+        padding: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 90vw;
+        grid-template-rows: repeat(6, calc(8rem + 5vw));
+        gap: 1.5rem;
+    }
+
+    .hours-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3rem 0 0.5rem 0;
+    }
+
+    .hours {
+        font-size: 1.8rem;
+        padding-top: 0;
+    }
+
+    .attribution {
+        padding-bottom: 2rem;
+    }
+}
