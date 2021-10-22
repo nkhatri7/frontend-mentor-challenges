@@ -2,38 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./styles/desktop.css">
+  <link rel="stylesheet" href="./styles/mobile.css">
+  <link rel="stylesheet" href="./styles/slider.css">
+  <link rel="stylesheet" href="./styles/toggle.css">
+
+  <script src="script.js"></script>
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="page-wrapper">
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30 day trial. No credit card required.</p>
+    </header>
+    <main>
+      <div class="pricing-wrapper">
+        <div class="pricing-details">
+          <div class="pricing">
+            <p class="pageviews"><span id="pageviews">100K</span> PAGEVIEWS</p>
+            <p class="price-total"><span id="price">$16.00</span> / &nbsp;<span id="billing-period">month</span></p>
+          </div>
+          <div class="slider-container">
+            <input type="range" name="pricing-slider" id="pricing-slider" class="slider" min="0" max="20" value="10" step="5">
+          </div>
+          <div class="billing-info">
+            <div class="monthly-billing">Monthly Billing</div>
+            <div class="toggle-container">
+              <label class="switch">
+                <input type="checkbox" id="billing-toggle">
+                <span class="toggle"></span>
+              </label>
+            </div>
+            <div class="yearly-billing">
+              <p>Yearly Billing</p>
+              <div class="discount"><span class="mobile-discount">-</span>25% <span class="desktop-discount">discount</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="pricing-wrapper">
+        <div class="bottom-section">
+          <div class="features">
+            <div class="feature">
+              <img src="./images/icon-check.svg" alt="Check">
+              <p>Unlimited websites</p>
+            </div>
+            <div class="feature">
+              <img src="./images/icon-check.svg" alt="Check">
+              <p>100% data ownership</p>
+            </div>
+            <div class="feature">
+              <img src="./images/icon-check.svg" alt="Check">
+              <p>Email reports</p>
+            </div>
+          </div>
+          <button class="trial-button">Start my trial</button>
+        </div>
+      </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/nkhatri7" target="_blank">Neil Khatri</a>.
+    </div>
   </div>
 </body>
 </html>

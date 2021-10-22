@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/bg-pattern.svg');
+    background-size: cover;
+    background-position: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../images/pattern-circles.svg') no-repeat center center;
+    padding: 2rem;
+    margin-top: 3vw;
+}
+
+h1 {
+    font-size: 2.3rem;
+    color: hsl(227, 35%, 25%);
+    padding-bottom: 0.8rem;
+}
+
+header > p {
+    font-size: 1.2rem;
+    color: hsl(225, 20%, 60%);
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    width: 40rem;
+    margin: 4rem auto;
+    color: hsl(225, 20%, 60%);
+    box-shadow: 0px 10px 15px hsl(224, 65%, 95%);
+}
+
+.pricing-wrapper {
+    padding: 2rem;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.pageviews {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+}
+
+.price-total {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.price-total > #price {
+    color: hsl(227, 35%, 25%);
+    font-weight: 800;
+    font-size: 3rem;
+    padding-right: 0.5rem;
+}
+
+.billing-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.monthly-billing {
+    padding: 0 1rem;
+    margin-left: 4.9rem;
+}
+
+.yearly-billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.yearly-billing p {
+    padding-right: 0.5rem;
+}
+
+.discount {
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-size: 0.7rem;
+    border-radius: 20px;
+    padding: 0.1rem 0.4rem 0.2rem 0.4rem;
+}
+
+.mobile-discount {
+    display: none;
+}
+
+hr {
+    border: 0;
+    border-top: 0.2px solid hsl(224, 65%, 95%);
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+}
+
+.feature > img {
+    padding-right: 0.7rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.trial-button {
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    padding: 0.7rem 3rem;
+    border-radius: 50px;
+    border-color: transparent;
+    font-family: 'Manrope', sans-serif;
+}
+
+.trial-button:hover {
+    color: hsl(224, 65%, 95%);
+    cursor: pointer;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

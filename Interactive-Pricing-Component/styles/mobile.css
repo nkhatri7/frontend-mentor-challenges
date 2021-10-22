@@ -1,0 +1,82 @@
+@media screen and (max-width: 500px) {
+    body {
+        background-image: url('../images/mobile-bg-pattern.svg');
+        text-align: center;
+    }
+
+    header {
+        padding: 2.5rem 0;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    header > p {
+        font-size: 0.8rem;
+        max-width: 45vw;
+    }
+
+    main {
+        max-width: 90vw;
+        margin: 2rem auto;
+    }
+
+    .pricing-wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .pricing {
+        flex-direction: column;
+    }
+
+    .pageviews {
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding-bottom: 6rem;
+    }
+
+    .price-total {
+        font-size: 0.8rem;
+    }
+
+    .price-total > #price {
+        font-size: 2rem;
+    }
+
+    .billing-info {
+        font-size: 0.7rem;
+        margin-left: -3rem;
+    }
+
+    .monthly-billing, .yearly-billing {
+        white-space: nowrap;
+    }
+
+    .yearly-billing p {
+        padding-right: 0.3rem;
+    }
+
+    .discount {
+        font-size: 0.6rem;
+    }
+
+    .mobile-discount {
+        display: inline;
+    }
+
+    .desktop-discount {
+        display: none;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+    }
+
+    .features {
+        padding-bottom: 1.5rem;
+        margin-top: -0.5rem;
+    }
+}
