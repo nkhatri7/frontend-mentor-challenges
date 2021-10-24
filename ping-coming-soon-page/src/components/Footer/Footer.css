@@ -1,0 +1,41 @@
+.copyright {
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 59%);
+}
+
+.social-icons-container {
+    padding-bottom: 1rem;
+}
+
+.social-icon {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid hsl(223, 100%, 88%);
+    height: 30px;
+    width: 30px;
+    margin-inline: 5px;
+}
+
+.fontawesomeicon {
+    color: hsl(223, 87%, 63%);
+}
+
+.social-icon:hover {
+    background-color: hsl(223, 87%, 63%);
+    border-color: hsl(223, 87%, 63%);
+    cursor: pointer;
+}
+
+.social-icon:hover .fontawesomeicon {
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    .copyright {
+        font-size: 0.65rem;
+    }
+
+    .social-icons-container {
+        padding-bottom: 1.5rem;
+    }
+}

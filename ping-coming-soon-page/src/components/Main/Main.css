@@ -1,0 +1,142 @@
+.main-container {
+    margin-bottom: 4rem;
+}
+
+.logo-container {
+    margin: 4rem 0 2rem 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 3rem;
+    color: hsl(0, 0%, 59%);
+}
+
+h1 > span {
+    font-weight: 700;
+    color: hsl(209, 33%, 12%);
+}
+
+.welcome-text > p {
+    font-size: 1.3rem;
+    margin-top: -1rem;
+    padding-bottom: 0.5rem;
+}
+
+.user-input {
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.email-input {
+    text-align: left;
+}
+
+.email {
+    height: 50px;
+    width: 410px;
+    padding: 0 0.5rem 0 1.5rem;
+    border-radius: 50px;
+    border: 1px solid hsl(223, 100%, 88%);
+    color: hsl(0, 0%, 59%);
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.email::placeholder {
+    color: hsl(223, 100%, 88%);
+}
+
+.error-message {
+    font-size: 0.7rem;
+    color: hsl(354, 100%, 66%);
+    font-style: italic;
+    padding-left: 1.5rem;
+}
+
+.error-border {
+    border: 1px solid hsl(354, 100%, 66%);
+}
+
+.cta-button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    height: 50px;
+    width: 180px;
+    border-radius: 50px;
+    border-color: transparent;
+    box-shadow: 0px 5px 10px hsl(223, 100%, 88%);
+}
+
+.cta-button:hover {
+    background-color: hsl(223, 87%, 70%);
+    cursor: pointer;
+}
+
+.dashboard-illustration {
+    max-width: 620px;
+}
+
+@media screen and (max-width: 500px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8.5rem;
+    }
+
+    .logo-container {
+        margin-top: 4.5rem;
+    }
+
+    .ping-logo {
+        max-width: 3.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-text > p {
+        font-size: 0.8rem;
+        margin-top: 0;
+        padding-bottom: 1rem;
+    }
+
+    .user-input {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .email-input {
+        text-align: center;
+        margin-bottom: 0.2rem;
+    }
+
+    .email {
+        width: 70vw;
+        height: 40px;
+        margin-right: 0;
+        font-size: 0.8rem; 
+    }
+
+    .error-message {
+        padding-left: 0;
+    }
+
+    .cta-button {
+        width: calc(2rem + 70vw);
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .dashboard-illustration {
+        max-width: 85vw;
+    }
+}
