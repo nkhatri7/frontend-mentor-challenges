@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution](https://www.frontendmentor.io/solutions/ping-coming-soon-page-using-react-Ry5y1GbNt)
+- [Live Site](https://ping-coming-soon-page-nkhatri7.vercel.app/)
 
 ## My process
 
