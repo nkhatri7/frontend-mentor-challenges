@@ -9,7 +9,10 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
   />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="mobile.css">
+
+  <script src="script.js"></script>
   
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 </head>
@@ -33,7 +36,7 @@
       <div class="feature">
         <img src="images/icon-access-anywhere.svg" alt="Access Icon">
         <h3>Access your files, anywhere</h3>
-        <p>The ability to use a smartphone, tablet, or computer<br>to access your account means your files follow you everywhere.</p>
+        <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
       </div>
       <div class="feature security">
         <img src="images/icon-security.svg" alt="Security Icon">
@@ -48,13 +51,13 @@
       <div class="feature">
         <img src="images/icon-any-file.svg" alt="Folder Icon">
         <h3>Store any type of file</h3>
-        <p>Whether you're sharing holiday photos or work documents, Fylo has you covered allowing for all file<br>types to be securely stored and shared.</p>
+        <p>Whether you're sharing holiday photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
       </div>
     </section>
     <section class="extra-description">
-      <img src="images/illustration-stay-productive.png" alt="Communication Icon">
+      <img src="images/illustration-stay-productive.png" alt="Communication Icon" class="stay-productive-img">
       <div class="description-text">
-        <h2>Stay productive,<br>wherever you are</h2>
+        <h2>Stay productive, wherever you are</h2>
         <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
         <br>
         <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
@@ -105,10 +108,13 @@
     </section>
     <section class="email-sign-up">
       <h2>Get early access today</h2>
-      <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any<br>questions, our support team would be happy to help you.</p>
-      <form class="sign-up-form">
-        <input type="email" class="email-input" placeholder="email@example.com">
-        <button class="cta cta-email">Get Started For Free</button>
+      <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+      <form id="sign-up-form" class="sign-up-form">
+        <div class="email-input-container">
+          <input type="email" id="email-input" class="email-input" placeholder="email@example.com">
+          <p id="error-message" class="error-message"></p>
+        </div>
+        <button type="submit" class="cta cta-email">Get Started For Free</button>
       </form>
     </section>
   </main>

@@ -1,0 +1,196 @@
+@media screen and (max-width: 500px) {
+    * {
+        max-width: 100%;
+    }
+
+    header {
+        width: 100vw;
+        padding: 1.5rem 1rem 3rem 1rem;
+    }
+
+    .header-logo {
+        max-width: 85px;
+    }
+
+    nav a {
+        padding-inline: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .intro {
+        background: var(--intro-email-bg) url("images/bg-curvy-mobile.svg") bottom no-repeat;
+    }
+
+    .intro img {
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        max-width: 80vw;
+        line-height: 2.3rem;
+        padding-bottom: 1rem;
+    }
+
+    .intro p {
+        font-size: 0.8rem;
+        max-width: 73vw;
+        line-height: 1.2rem;
+    }
+
+    .cta-intro {
+        height: 45px;
+        width: 60vw;
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+
+    .features {
+        grid-template-columns: 85vw;
+        padding-top: 8rem;
+    }
+
+    .feature img {
+        max-width: 65px;
+    }
+
+    h3 {
+        padding: 2rem 0 0.8rem 0;
+    }
+
+    .security {
+        margin-top: 0;
+    }
+
+    .security img {
+        max-width: 55px;
+    }
+
+    .extra-description {
+        flex-direction: column;
+        padding: 9rem 0;
+    }
+
+    .stay-productive-img {
+        max-width: 80vw;
+    }
+
+    .description-text {
+        padding: 0 3rem 0 2rem;
+    }
+
+    .description-text h2 {
+        font-size: 1.1rem;
+        line-height: initial;
+        padding-top: 3rem;
+    }
+
+    .description-text p {
+        font-size: 0.8rem;
+    }
+
+    .fylo-link {
+        padding: 1rem 0 0.2rem 0;
+    }
+
+    .description-text a {
+        font-size: 0.7rem;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        margin-bottom: 19rem;
+    }
+
+    .testimonial {
+        max-width: 75vw;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial:first-child::before {
+        transform: scale(0.4);
+        top: -30px;
+        left: -10px;
+    }
+
+    .testimonial p {
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+
+    .profile {
+        padding-top: 1rem;
+    }
+
+    .profile-description p {
+        font-size: 0.5rem;
+    }
+
+    .email-sign-up {
+        max-width: 90vw;
+        bottom: -160px;
+        padding: 2rem 0;
+    }
+
+    .email-sign-up h2 {
+        font-size: 1.1rem;
+    }
+
+    .email-sign-up p {
+        max-width: 75vw;
+    }
+
+    .sign-up-form {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .sign-up-form input, .cta-email {
+        width: 75vw;
+    }
+
+    .sign-up-form input {
+        margin-right: 0;
+    }
+
+    .email-input-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .error-message {
+        font-size: 0.7rem;
+    }
+
+    footer {
+        padding: 15rem 2rem 2rem 2rem;
+    }
+
+    .footer-logo {
+        padding-bottom: 2.5rem;
+    }
+
+    .footer-items {
+        flex-direction: column;
+    }
+
+    .footer-location {
+        padding-bottom: 1rem;
+        column-gap: 1.6rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin: 4rem 0 2rem 0;
+    }
+
+    .footer-links-column {
+        padding-inline: 0;
+        margin: 1rem 0;
+    }
+
+    .footer-social-media {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -109,7 +109,7 @@ h1 {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(2, 380px);
+    grid-template-columns: repeat(2, 356px);
     gap: 80px 150px;
 }
 
@@ -160,6 +160,11 @@ h3 {
     padding-left: 0.3rem;
 }
 
+.fylo-link:hover img {
+    transform: translateX(5px);
+    transition: transform 0.3s ease-out;
+}
+
 .testimonials {
     display: flex;
     justify-content: space-between;
@@ -205,12 +210,16 @@ h4 {
 }
 
 .email-sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--intro-email-bg);
     width: 800px;
     text-align: center;
     padding: 2.5rem 0;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -222,10 +231,13 @@ h4 {
     padding: 0.5rem 0 1.2rem 0;
 }
 
+.email-sign-up p {
+    max-width: 650px;
+}
+
 .sign-up-form {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding-top: 2.5rem;
 }
 
@@ -236,6 +248,23 @@ h4 {
     border-color: transparent;
     padding-left: 1.5rem;
     margin-right: 2rem;
+}
+
+.error-message {
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    color: var(--light-red);
+    font-size: 0.8rem;
+}
+
+.error-border {
+    outline: none !important;
+    border: 2px solid var(--light-red);
+}
+
+::placeholder {
+    opacity: 0.5;
 }
 
 .cta-email {
@@ -333,5 +362,5 @@ footer {
     padding-top: 3rem;
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--cyan);
 }
