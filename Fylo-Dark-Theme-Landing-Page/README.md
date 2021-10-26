@@ -30,8 +30,8 @@ The completed mobile screenshot is extremely long so if you want to see it, look
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-FhjosQs5_)
+- [Live Site URL](https://lucid-noyce-177052.netlify.app/)
 
 ## My process
 
