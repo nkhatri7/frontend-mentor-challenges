@@ -1,0 +1,20 @@
+.wrapper {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../../images/image-hero-desktop.jpg") no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 9rem 0 10.3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-inline: 1rem;
+}
