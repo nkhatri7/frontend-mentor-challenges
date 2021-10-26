@@ -4,6 +4,13 @@ import mastercraftLogo from "../../images/logo-mastercraft.svg";
 import bookmarkIcon from "../../images/icon-bookmark.svg";
 
 class ProjectHeader extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            bookmarked: false
+        };
+    }
+
     render() {
         return (
             <div className="project-header">
