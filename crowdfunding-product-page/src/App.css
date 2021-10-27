@@ -4,6 +4,7 @@
   --moderate-cyan: hsl(176, 50%, 47%);
   --dark-cyan: hsl(176, 72%, 28%);
   --dark-grey: hsl(0, 0%, 48%);
+  --unavailable-cyan: hsla(176, 50%, 47%, 0.5);
 }
 
 * {
@@ -32,4 +33,18 @@
   font-family: "Commissioner", sans-serif;
   font-weight: 700;
   font-size: 1rem;
+}
+
+.cta:hover {
+  background-color: var(--dark-cyan);
+  cursor: pointer;
+}
+
+.cta-unavailable {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cta-unavailable:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
 }

@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 100%;
     padding: 0 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border: 1px solid rgba(117, 117, 117, 0.1);
 }
 
@@ -47,4 +47,8 @@ p {
 .bookmark-container p {
     padding: 0 1.5rem 0 0.9rem;
     font-weight: 700;
+}
+
+.bookmark-container:hover {
+    cursor: pointer;
 }

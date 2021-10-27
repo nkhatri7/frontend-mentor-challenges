@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 100%;
     padding: 2rem 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border: 1px solid rgba(117, 117, 117, 0.1);
 }
 
@@ -36,14 +36,14 @@
 }
 
 .progress-bar-container {
-    height: 15px;
+    height: 12px;
     width: 100%;
     border-radius: 50px;
     background-color: #F4F4F4;
 }
 
 .progress-bar {
-    height: 15px;
+    height: 12px;
     border-radius: 50px;
     background-color: var(--moderate-cyan);
 }
