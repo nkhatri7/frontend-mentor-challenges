@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export class ProjectMain extends Component {
     render() {
         return (
-            <div>
+            <section className="project-main">
                 
-            </div>
+            </section>
         );
     }
 }

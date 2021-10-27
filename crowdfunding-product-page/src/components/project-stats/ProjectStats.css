@@ -1,0 +1,49 @@
+.project-stats {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(117, 117, 117, 0.1);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.funds, .days-left {
+    padding-right: 2.8rem;
+}
+
+.backers, .days-left {
+    padding-left: 2.5rem;
+}
+
+.backers {
+    border-inline: 1px solid rgba(117, 117, 117, 0.3);
+    padding-right: 5rem;
+}
+
+.stat-container h2 {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+}
+
+.progress-bar-container {
+    height: 15px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #F4F4F4;
+}
+
+.progress-bar {
+    height: 15px;
+    border-radius: 50px;
+    background-color: var(--moderate-cyan);
+}

@@ -4,5 +4,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 700px;
+    width: 730px;
+    margin-bottom: 8rem;
 }

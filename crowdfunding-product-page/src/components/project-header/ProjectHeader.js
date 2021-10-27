@@ -13,7 +13,7 @@ class ProjectHeader extends Component {
 
     render() {
         return (
-            <div className="project-header">
+            <section className="project-header">
                 <figure className="mastercraft-logo">
                     <img src={mastercraftLogo} alt="mastercraft logo" />
                 </figure>
@@ -26,7 +26,7 @@ class ProjectHeader extends Component {
                         <p>Bookmark</p>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }
