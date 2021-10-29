@@ -1,0 +1,30 @@
+.completed-modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+figure > img {
+    width: 85px;
+}
+
+.completed-modal-container figure {
+    margin-bottom: 3rem;
+}
+
+.completed-modal-container h2 {
+    margin-bottom: 1rem;
+}
+
+.completed-modal-container p {
+    line-height: 1.8rem;
+}
+
+.cta-completed {
+    height: 50px;
+    width: 100px;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}

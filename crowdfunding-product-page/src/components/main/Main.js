@@ -4,6 +4,7 @@ import ProjectHeader from "../project-header/ProjectHeader";
 import ProjectMain from "../project-main/ProjectMain";
 import ProjectStats from "../project-stats/ProjectStats";
 import DefaultModal from "../default-modal/DefaultModal";
+import CompletedModal from "../completed-modal/CompletedModal";
 
 class Main extends React.Component {
     constructor(props) {
@@ -33,6 +34,12 @@ class Main extends React.Component {
     handleCloseDefaultModal = () => {
         this.setState({
             showDefaultModal: false
+        });
+    }
+
+    handleCloseCompletedModal = () => {
+        this.setState({
+            showCompletedModal: false
         });
     }
 
@@ -87,7 +94,8 @@ class Main extends React.Component {
                         backers: this.state.stats.backers + 1,
                         daysLeft: this.state.stats.daysLeft
                     },
-                    showDefaultModal: false
+                    showDefaultModal: false,
+                    showCompletedModal: true
                 });
             }
         } 
@@ -100,6 +108,7 @@ class Main extends React.Component {
                 <ProjectStats stats={this.state.stats} />
                 <ProjectMain showModal={this.handleShowDefaultModal} stands={this.state.stands} />
                 <DefaultModal show={this.state.showDefaultModal} closeModal={this.handleCloseDefaultModal} stands={this.state.stands} submit={this.handlePledgeSubmit} />
+                <CompletedModal show={this.state.showCompletedModal} closeModal={this.handleCloseCompletedModal} />
             </main>
         );
     }
