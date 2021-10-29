@@ -11,53 +11,53 @@ export class ProjectMain extends Component {
                     <br></br>
                     <p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.</p>
                 </section>
-                <section className="products">
-                    <section className="product">
-                        <div className="product-header">
+                <section className="pledges">
+                    <section className="pledge">
+                        <div className="pledge-header">
                             <h3>Bamboo Stand</h3>
-                            <p className="pledge">Pledge $25 or more</p>
+                            <p className="pledge-text">Pledge $25 or more</p>
                         </div>
-                        <div className="product-main">
+                        <div className="pledge-main">
                             <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
                         </div>
-                        <div className="product-footer">
+                        <div className="pledge-footer">
                             <div className="amount-left">
-                                <h3>101</h3>
+                                <h3>{this.props.stands.bambooStand}</h3>
                                 <p>left</p>
                             </div>
-                            <button className="cta product-cta">Select Reward</button>
+                            <button className="cta pledge-cta" onClick={this.props.showModal}>Select Reward</button>
                         </div>
                     </section>
-                    <section className="product">
-                        <div className="product-header">
+                    <section className="pledge">
+                        <div className="pledge-header">
                             <h3>Black Edition Stand</h3>
-                            <p className="pledge">Pledge $75 or more</p>
+                            <p className="pledge-text">Pledge $75 or more</p>
                         </div>
-                        <div className="product-main">
+                        <div className="pledge-main">
                             <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
                         </div>
-                        <div className="product-footer">
+                        <div className="pledge-footer">
                             <div className="amount-left">
-                                <h3>64</h3>
+                                <h3>{this.props.stands.blackStand}</h3>
                                 <p>left</p>
                             </div>
-                            <button className="cta product-cta">Select Reward</button>
+                            <button className="cta pledge-cta" onClick={this.props.showModal}>Select Reward</button>
                         </div>
                     </section>
-                    <section className="product product-unavailable">
-                        <div className="product-header product-header-unavailable">
+                    <section className="pledge pledge-unavailable">
+                        <div className="pledge-header pledge-header-unavailable">
                             <h3>Mahogany Special Edition</h3>
-                            <p className="pledge unavailable-pledge">Pledge $200 or more</p>
+                            <p className="pledge-text unavailable-pledge-text">Pledge $200 or more</p>
                         </div>
-                        <div className="product-main product-main-unavailable">
+                        <div className="pledge-main pledge-main-unavailable">
                             <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
                         </div>
-                        <div className="product-footer product-footer-unavailable">
+                        <div className="pledge-footer pledge-footer-unavailable">
                             <div className="amount-left">
-                                <h3>0</h3>
+                                <h3>{this.props.stands.mahoganyStand}</h3>
                                 <p>left</p>
                             </div>
-                            <button className="cta product-cta cta-unavailable">Out of stock</button>
+                            <button className="cta pledge-cta cta-unavailable">Out of stock</button>
                         </div>
                     </section>
                 </section>

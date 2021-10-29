@@ -49,7 +49,7 @@ Users should be able to:
 I learnt how to use semantic HTML5 markup, which is good practice for web developers as it helps with accessibility and SEO. I also learnt how to change the styling of an element when you hover over another element. An example from my code is seen below:
 
 ```css
-.social-icon-hover .fab {
+.social-icon:hover .fab {
   color: hsl(300, 69%, 71%);
   cursor: pointer;
 }

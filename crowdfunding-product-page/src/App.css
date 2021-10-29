@@ -27,7 +27,7 @@
 
 .cta {
   background-color: var(--moderate-cyan);
-  border-color: transparent;
+  border: none;
   border-radius: 50px;
   color: white;
   font-family: "Commissioner", sans-serif;
