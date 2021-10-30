@@ -1,3 +1,10 @@
+.default-modal {
+    height: '600px';
+    width: '730px';
+    top: 100px;
+    padding: 2.5rem 3rem;
+}
+
 .default-modal-header {
     display: flex;
     justify-content: space-between;
@@ -105,6 +112,10 @@ input[type="radio"]:checked + *::before {
     margin-top: -0.5rem;
 }
 
+.modal-pledge-amount-mobile {
+    display: none;
+}
+
 .modal-pledge-text {
     color: var(--moderate-cyan);
     font-size: 0.9rem;
@@ -118,14 +129,11 @@ input[type="radio"]:checked + *::before {
     margin-left: 0.4rem;
 }
 
-.modal-pledge-body {
-    margin-left: 2.8rem;
-}
-
 .modal-pledge-body p {
     font-weight: 400;
     line-height: 1.5rem;
     font-size: 0.9rem;
+    margin-left: 2.8rem;
 }
 
 .modal-pledge-unavailable {
@@ -136,7 +144,7 @@ input[type="radio"]:checked + *::before {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-pledge-unavailable .modal-pledge-body p, .modal-pledge-unavailable .modal-pledge-header-right p {
+.modal-pledge-unavailable .modal-pledge-body p {
     color: rgba(117, 117, 117, 0.5);
 }
 
@@ -197,4 +205,115 @@ hr {
     height: 45px;
     width: 100px;
     font-size: 0.85rem;
+}
+
+@media screen and (max-width: 375px) {
+    .default-modal {
+        width: 90vw;
+        height: 680px;
+        top: 120px;
+        padding: 1rem 1.5rem;
+    }
+
+    .default-modal-header {
+        padding-top: 1.5rem;
+    }
+
+    .default-modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .close-button {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .default-modal-main p {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+
+    .modal-pledges {
+        margin-top: 1.5rem;
+    }
+
+    .modal-pledge {
+        align-items: flex-start;
+    }
+
+    .modal-pledge-header {
+        flex-direction: column;
+    }
+
+    .pledge-title {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pledge-title-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-pledge-text {
+        margin-left: 0rem;
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    .pledge-title label {
+        font-size: 0.9rem;
+    }
+
+    .modal-pledge-amount {
+        display: none;
+    }
+
+    .modal-pledge-body p {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        margin-left: 0;
+    }
+
+    .modal-pledge-amount-mobile {
+        display: flex;
+        align-items: center;
+        margin-top: 1.2rem;
+    }
+
+    .modal-pledge-amount-mobile p {
+        margin-left: 0.3rem;
+    }
+
+    .modal-pledge-footer {
+        margin-top: 1rem;
+    }
+
+    hr {
+        width: 285px;
+    }
+
+    .modal-pledge-footer-content {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: -1.5rem;
+    }
+
+    .pledge-actions {
+        margin-top: 1.2rem;
+        margin-left: 1rem;
+    }
+
+    .cta-modal {
+        width: 110px;
+    }
+
+    .pledge-actions span {
+        margin-right: -2rem;
+    }
+
+    .pledge-actions input {
+        width: 100px;
+        padding-left: 2.5rem;
+    }
 }

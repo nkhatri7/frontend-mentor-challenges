@@ -47,3 +47,40 @@
     border-radius: 50px;
     background-color: var(--moderate-cyan);
 }
+
+@media screen and (max-width: 375px) {
+    .project-stats {
+        padding: 1rem 1.5rem 2.3rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0.3rem;
+    }
+
+    .stat-container {
+        padding: 1.5rem 0;
+    }
+
+    .stat-container p {
+        font-size: 0.9rem;
+    }
+
+    .funds, .days-left {
+        padding-right: 0;
+    }
+
+    .backers, .days-left {
+        padding-left: 0;
+    }
+
+    .backers {
+        padding-right: 0;
+        border-inline: none;
+        border-top: 1px solid rgba(117, 117, 117, 0.3);
+        border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+    }
+}

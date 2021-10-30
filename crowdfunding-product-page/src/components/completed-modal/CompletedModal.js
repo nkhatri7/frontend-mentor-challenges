@@ -17,8 +17,6 @@ export class CompletedModal extends Component {
             top: '50%',
             transform: 'translate(-50%, -50%)',
             height: 'max-content',
-            width: '540px',
-            padding: '3rem 2.5rem',
             borderRadius: '10px',
             display: 'flex',
             flexDirection: 'column',
@@ -28,7 +26,7 @@ export class CompletedModal extends Component {
 
     render() {
         return (
-            <Modal isOpen={this.props.show} style={this.customisedModalStyle} ariaHideApp={false} >
+            <Modal isOpen={this.props.show} style={this.customisedModalStyle} ariaHideApp={false} className="completed-modal">
                 <div className="completed-modal-container">
                     <figure>
                         <img src={checkIcon} alt="Check Icon" />

@@ -18,3 +18,19 @@ nav a {
     font-weight: 500;
     padding-inline: 1rem;
 }
+
+@media screen and (max-width: 375px) {
+    .wrapper {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../../images/image-hero-mobile.jpg") no-repeat;
+        background-position: center;
+        max-height: 300px;
+    }
+
+    .container {
+        padding: 1.8rem 0 0 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+}

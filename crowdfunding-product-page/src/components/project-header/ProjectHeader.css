@@ -52,3 +52,40 @@ p {
 .bookmark-container:hover {
     cursor: pointer;
 }
+
+.bookmark-container:hover svg g circle {
+    fill: var(--dark-grey);
+}
+
+@media screen and (max-width: 375px) {
+    .project-header {
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        padding: 1.2rem 1rem 0.8rem 1rem;
+    }
+
+    .project-header p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    .project-header-actions {
+        justify-content: center;
+        margin-top: 1.5rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .cta-project-header {
+        font-size: 1rem;
+        height: 55px;
+        width: 210px;
+        margin-right: 0.7rem;
+    }
+
+    #bookmark-text {
+        display: none;
+    }
+}

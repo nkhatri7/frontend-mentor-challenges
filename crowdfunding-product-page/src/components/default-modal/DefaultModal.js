@@ -13,11 +13,7 @@ export class DefaultModal extends Component {
             position: 'absolute',
             float: 'left',
             left: '50%',
-            top: '100px',
             transform: 'translateX(-50%)',
-            height: '600px',
-            width: '730px',
-            padding: '2.5rem 3rem',
             borderRadius: '10px',
             display: 'flex',
             flexDirection: 'column',
@@ -48,7 +44,7 @@ export class DefaultModal extends Component {
 
     render() {
         return (
-            <Modal isOpen={this.props.show} style={this.customisedModalStyle} ariaHideApp={false}>
+            <Modal isOpen={this.props.show} style={this.customisedModalStyle} ariaHideApp={false} className="default-modal">
                 <section className="default-modal-header">
                     <h2>Back this project</h2>
                     <button className="close-button" onClick={this.props.closeModal}>
@@ -62,7 +58,9 @@ export class DefaultModal extends Component {
                             <div className="modal-pledge-header">
                                 <div className="pledge-title">
                                     <input type="radio" id="no-reward-radio" className="radio" name="pledge-radio" value="noReward" onChange={this.handlePledgeChange} />
-                                    <label htmlFor="no-reward-radio" className="pledge-label">Pledge with no reward</label>
+                                    <div className="pledge-title-text">
+                                        <label htmlFor="no-reward-radio" className="pledge-label">Pledge with no reward</label>
+                                    </div>
                                 </div>
                             </div>
                             <div className="modal-pledge-body">
@@ -84,8 +82,10 @@ export class DefaultModal extends Component {
                             <div className="modal-pledge-header">
                                 <div className="pledge-title">
                                     <input type="radio" id="bamboo-radio" className="radio" name="pledge-radio" value="bambooStand" onChange={this.handlePledgeChange} />
-                                    <label htmlFor="bamboo-radio" className="pledge-label">Bamboo Stand</label>
-                                    <p className="modal-pledge-text">Pledge $25 or more</p>
+                                    <div className="pledge-title-text">
+                                        <label htmlFor="bamboo-radio" className="pledge-label">Bamboo Stand</label>
+                                        <p className="modal-pledge-text">Pledge $25 or more</p>
+                                    </div>
                                 </div>
                                 <div className="modal-pledge-amount">
                                     <h3>{this.props.stands.bambooStand}</h3>
@@ -94,6 +94,10 @@ export class DefaultModal extends Component {
                             </div>
                             <div className="modal-pledge-body">
                                 <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
+                            </div>
+                            <div className="modal-pledge-amount-mobile">
+                                <h3>{this.props.stands.bambooStand}</h3>
+                                <p>left</p>
                             </div>
                             <div className="modal-pledge-footer">
                                 <hr />
@@ -111,8 +115,10 @@ export class DefaultModal extends Component {
                             <div className="modal-pledge-header">
                                 <div className="pledge-title">
                                     <input type="radio" id="black-radio" className="radio" name="pledge-radio" value="blackStand" onChange={this.handlePledgeChange} />
-                                    <label htmlFor="black-radio" className="pledge-label">Black Edition Stand</label>
-                                    <p className="modal-pledge-text">Pledge $75 or more</p>
+                                    <div className="pledge-title-text">
+                                        <label htmlFor="black-radio" className="pledge-label">Black Edition Stand</label>
+                                        <p className="modal-pledge-text">Pledge $75 or more</p>
+                                    </div>
                                 </div>
                                 <div className="modal-pledge-amount">
                                     <h3>{this.props.stands.blackStand}</h3>
@@ -122,13 +128,17 @@ export class DefaultModal extends Component {
                             <div className="modal-pledge-body">
                                 <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
                             </div>
+                            <div className="modal-pledge-amount-mobile">
+                                <h3>{this.props.stands.blackStand}</h3>
+                                <p>left</p>
+                            </div>
                             <div className="modal-pledge-footer">
                                 <hr />
                                 <div className="modal-pledge-footer-content">
                                     <p>Enter your pledge</p>
                                     <div className="pledge-actions">
                                         <span className="currency">$</span>
-                                        <input id="bamboo-price" type="text" defaultValue={75} />
+                                        <input id="black-price" type="text" defaultValue={75} />
                                         <button className="cta cta-modal" onClick={this.props.submit}>Continue</button>
                                     </div>
                                 </div>
@@ -138,8 +148,10 @@ export class DefaultModal extends Component {
                             <div className="modal-pledge-header">
                                 <div className="pledge-title">
                                     <input type="radio" id="mahogany-radio" name="pledge-radio" value="mahoganyStand" disabled />
-                                    <label htmlFor="mahogany-radio" className="pledge-label unavailable-pledge-label">Mahogany Special Edition</label>
-                                    <p className="modal-pledge-text modal-unavailable-pledge-text">Pledge $200 or more</p>
+                                    <div className="pledge-title-text">
+                                        <label htmlFor="mahogany-radio" className="pledge-label unavailable-pledge-label">Mahogany Special Edition</label>
+                                        <p className="modal-pledge-text modal-unavailable-pledge-text">Pledge $200 or more</p>
+                                    </div>
                                 </div>
                                 <div className="modal-pledge-amount">
                                     <h3>{this.props.stands.mahoganyStand}</h3>
@@ -148,6 +160,10 @@ export class DefaultModal extends Component {
                             </div>
                             <div className="modal-pledge-body">
                                 <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+                            </div>
+                            <div className="modal-pledge-amount-mobile">
+                                <h3>{this.props.stands.mahoganyStand}</h3>
+                                <p>left</p>
                             </div>
                         </section>
                     </section>
