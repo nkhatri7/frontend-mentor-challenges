@@ -11,7 +11,7 @@
     padding: 3rem 9rem 0 10.3rem;
 }
 
-nav a {
+.desktop-nav a {
     text-decoration: none;
     color: white;
     font-size: 14px;
@@ -19,18 +19,35 @@ nav a {
     padding-inline: 1rem;
 }
 
+.menu-btn {
+    display: none;
+}
+
 @media screen and (max-width: 375px) {
     .wrapper {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../../images/image-hero-mobile.jpg") no-repeat;
-        background-position: center;
-        max-height: 300px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("../../images/image-hero-mobile.jpg") no-repeat center;
+        /* background-position: top; */
+        background-size: 375px 300px;
+        height: 300px;
     }
 
     .container {
-        padding: 1.8rem 0 0 1.5rem;
+        padding: 2rem 1.5rem 0 1.5rem;
     }
 
-    nav {
+    .menu-btn {
+        display: block;
+        height: 25px;
+        width: 25px;
+        border: none;
+        background: url("../../images/icon-hamburger.svg") no-repeat center;
+    }
+
+    .menu-open {
+        background: url("../../images/icon-close-menu.svg") no-repeat center;
+    }
+
+    .desktop-nav {
         display: none;
     }
 }

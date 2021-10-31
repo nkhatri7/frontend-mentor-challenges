@@ -5,7 +5,9 @@ import mastercraftLogo from "../../images/logo-mastercraft.svg";
 class ProjectHeader extends Component {
     constructor (props) {
         super(props);
-        this.state = { bookmarked: false };
+        this.state = { 
+            bookmarked: false 
+        };
         this.handleClick = this.handleClick.bind(this);
     }
 

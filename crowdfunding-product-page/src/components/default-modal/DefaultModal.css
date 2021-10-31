@@ -1,6 +1,6 @@
 .default-modal {
-    height: '600px';
-    width: '730px';
+    height: 600px;
+    width: 730px;
     top: 100px;
     padding: 2.5rem 3rem;
 }
@@ -72,6 +72,10 @@ input[type="radio"]:hover {
 
 input[type="radio"]:disabled:hover {
     cursor: not-allowed;
+}
+
+.pledge-title-text {
+    display: flex;
 }
 
 .pledge-label {
@@ -251,7 +255,6 @@ hr {
     }
 
     .pledge-title-text {
-        display: flex;
         flex-direction: column;
     }
 

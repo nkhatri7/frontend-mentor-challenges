@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import "./Main.css";
 import ProjectHeader from "../project-header/ProjectHeader";
 import ProjectMain from "../project-main/ProjectMain";
@@ -6,7 +6,7 @@ import ProjectStats from "../project-stats/ProjectStats";
 import DefaultModal from "../default-modal/DefaultModal";
 import CompletedModal from "../completed-modal/CompletedModal";
 
-class Main extends React.Component {
+class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
