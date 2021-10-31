@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import "./Header.css";
 import logo from "../../images/logo.svg";
 import MobileMenu from "../mobile-menu/MobileMenu";
-import { Component } from "react";
 
 class Header extends Component {
     constructor() {
