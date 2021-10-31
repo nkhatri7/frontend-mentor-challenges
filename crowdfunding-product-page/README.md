@@ -34,8 +34,8 @@ Mobile screenshot is seen in the completed designs folder which is in the design
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/crowdfunding-product-page-built-with-react-Ho2a6DFmu)
+- [Live Site](https://frontend-mentor-challenges-rho.vercel.app/)
 
 ## My process
 

@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/interactive-pricing-component-using-flexbox--9cwvI7kK)
-- [Live Site](https://interactive-pricing-component-nkhatri7.vercel.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/interactive-pricing-component-using-flexbox-fltsPs0Zs)
+- [Live Site](https://distracted-murdock-101476.netlify.app/)
 
 ## My process
 
