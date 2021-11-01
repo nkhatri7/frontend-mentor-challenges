@@ -1,0 +1,67 @@
+body {
+    background: url("../../assets/home/background-home-desktop.jpg") no-repeat;
+    background-size: 1440px 900px;
+    width: 100%;
+    position: relative;
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15.69rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 77vw;
+}
+
+.main-text {
+    max-width: 450px;
+}
+
+h5 {
+    color: var(--light-purple);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+}
+
+h1 {
+    font-size: 150px;
+    font-weight: lighter;
+    padding: 1.4rem 0;
+}
+
+p {
+    color: var(--light-purple);
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 32px;
+}
+
+.main-button-container {
+    position: relative;
+    height: 100%;
+}
+
+button {
+    height: 274px;
+    width: 274px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: var(--black);
+    font-family: 'Bellefair', sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 75px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
