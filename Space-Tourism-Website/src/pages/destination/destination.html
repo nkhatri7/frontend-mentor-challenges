@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="destination.css">
 
-    <script src="../../script.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/destination.js"></script>
 
     <title>Frontend Mentor | Space Tourism Website</title>
 </head>
@@ -18,12 +19,41 @@
         <figure class="logo">
             <img src="../../assets/shared/logo.svg" alt="Logo">
         </figure>
-        <nav>
+        <nav class="website-nav">
             <a href="../home/home.html" class="nav-link"><span>00</span>HOME</a>
             <a href="../destination/destination.html" class="nav-link active-link"><span>01</span>DESTINATION</a>
             <a href="../crew/crew.html" class="nav-link"><span>02</span>CREW</a>
             <a href="../technology/technology.html" class="nav-link"><span>03</span>TECHNOLOGY</a>
         </nav>
     </header>
+    <main>
+        <article class="destination-header-image">
+            <h2><span>01</span> PICK YOUR DESTINATION</h2>
+            <figure class="destination-figure">
+                <img id="destination-img" src="../../assets/destination/image-moon.webp" alt="The Moon">
+            </figure>
+        </article>
+        <section class="destination-main-content">
+            <nav class="destination-tabs">
+                <button class="destination-tab" data-destination="Moon">MOON</button>
+                <button class="destination-tab" data-destination="Mars">MARS</button>
+                <button class="destination-tab" data-destination="Europa">EUROPA</button>
+                <button class="destination-tab" data-destination="Titan">TITAN</button>
+            </nav>
+            <h1 id="destination-name"></h1>
+            <p id="body-text" class="body-text"></p>
+            <hr>
+            <div class="destination-stats">
+                <div class="destination-stat">
+                    <h4>AVG. DISTANCE</h4>
+                    <h3 id="avg-distance"></h3>
+                </div>
+                <div class="destination-stat">
+                    <h4>EST. TRAVEL TIME</h4>
+                    <h3 id="travel-time"></h3>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

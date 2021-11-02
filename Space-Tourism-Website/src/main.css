@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@300;400;600&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&family=Barlow:wght@300;400&family=Bellefair&display=swap');
 
 :root {
     --black: #0B0D17;
@@ -13,6 +13,7 @@
 
 h1, h2, h3, h4 {
     font-family: 'Bellefair', sans-serif;
+    font-weight: lighter;
     color: white;
 }
 
@@ -27,7 +28,7 @@ header {
     margin-left: 55px;
 }
 
-nav {
+.website-nav {
     background-color: #FFFFFF04;
     backdrop-filter: blur(30px);
     padding: 2.4rem 6rem;
@@ -43,6 +44,10 @@ nav {
     letter-spacing: 2.7px;
     margin: 1.45rem;
     padding: 2.2rem 0;
+}
+
+.nav-link:not(.active-link):hover {
+    border-bottom: 3px solid #979797;
 }
 
 .active-link {

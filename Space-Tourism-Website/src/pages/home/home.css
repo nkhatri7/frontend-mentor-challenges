@@ -10,7 +10,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 15.69rem;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@ main {
     max-width: 450px;
 }
 
-h5 {
+h2 {
     color: var(--light-purple);
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 300;
@@ -31,7 +31,6 @@ h5 {
 
 h1 {
     font-size: 150px;
-    font-weight: lighter;
     padding: 1.4rem 0;
 }
 
@@ -62,6 +61,6 @@ button {
 
 button:hover {
     cursor: pointer;
-    box-shadow: 0 0 0 75px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 0 75px rgba(255, 255, 255, 0.1036);
+    transition: box-shadow 0.4s ease-in-out;
 }
