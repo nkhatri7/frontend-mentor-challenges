@@ -10,7 +10,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 4.7rem;
-    padding-bottom: 4rem;
+    padding-bottom: 6.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +100,7 @@ h4 {
     font-size: 14px;
     color: var(--light-purple);
     letter-spacing: 2.36px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
 }
 
 h3 {

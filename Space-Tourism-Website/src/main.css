@@ -29,8 +29,8 @@ header {
 }
 
 .website-nav {
-    background-color: #FFFFFF04;
-    backdrop-filter: blur(30px);
+    background-color: #FFFFFF10;
+    backdrop-filter: blur(1000px);
     padding: 2.4rem 6rem;
     padding-right: 8.8rem;
 }

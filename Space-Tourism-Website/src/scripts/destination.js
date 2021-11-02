@@ -45,7 +45,7 @@ window.addEventListener('load', () => {
             const distance = data.destinations[index].distance;
             const travel = data.destinations[index].travel;
             
-            // Update HTML elements
+            // Update DOM elements
             destinationName.innerText = `${name.toUpperCase()}`;
             image.src = imgSource;
             bodyText.innerText = `${description}`;

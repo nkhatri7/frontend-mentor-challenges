@@ -5,6 +5,11 @@ body {
     position: relative;
 }
 
+.website-nav {
+    background-color: #FFFFFF04;
+    backdrop-filter: blur(30px);
+}
+
 main {
     position: absolute;
     left: 50%;
