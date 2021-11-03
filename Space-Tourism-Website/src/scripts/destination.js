@@ -1,3 +1,5 @@
+import {getData} from './main.js';
+
 window.addEventListener('load', () => {
     const tabs = document.querySelectorAll('.destination-tab');
     const image = document.getElementById('destination-img');
@@ -8,12 +10,6 @@ window.addEventListener('load', () => {
 
     const destinations = ['Moon', 'Mars', 'Europa', 'Titan'];
     let index = 0;
-
-    async function getData() {
-        const response = await fetch('../../data.json');
-        const data = await response.json();
-        return data;
-    }
 
     tabs.forEach(async (tab) => {
         let data = await getData();

@@ -1,15 +1,11 @@
+import {getData} from './main.js';
+
 window.addEventListener('load', () => {
     const options = document.querySelectorAll('.option-circle');
     const roleElement = document.getElementById('role');
     const nameElement = document.getElementById('name');
     const bioElement = document.getElementById('bio');
     const imgElement = document.getElementById('crew-img');
-
-    async function getData() {
-        const response = await fetch('../../data.json');
-        const data = await response.json();
-        return data;
-    }
 
     options.forEach(async (option) => {
         let data = await getData();

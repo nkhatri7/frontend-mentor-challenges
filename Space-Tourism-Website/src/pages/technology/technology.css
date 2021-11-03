@@ -1,0 +1,95 @@
+body {
+    background: url("../../assets/technology/background-technology-desktop.jpg") no-repeat;
+    background-size: 1440px 900px;
+    width: 100%;
+    position: relative;
+}
+
+main {
+    margin-top: 4.7rem;
+    display: flex;
+    padding-bottom: 11rem;
+}
+
+.main-content {
+    margin-left: 10.4rem;
+}
+
+h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+}
+
+h2 span {
+    font-weight: 700;
+    color: #FFFFFF40;
+    margin-right: 0.7rem;
+}
+
+.main-body-content {
+    margin-top: 8.6rem;
+    display: flex;
+}
+
+.technology-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4.9rem;
+}
+
+.technology-button {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: transparent;
+    color: white;
+    font-family: 'Bellefair', sans-serif;
+    font-weight: lighter;
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+.active-technology {
+    background-color: white;
+    color: var(--black);
+    border: none;
+}
+
+.technology-button:hover {
+    cursor: pointer;
+}
+
+.technology-button:not(.active-technology):hover {
+    border: 1px solid white;
+}
+
+h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2.7px;
+    color: var(--light-purple);
+}
+
+h1 {
+    font-size: 56px;
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.body-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 32px;
+    color: var(--light-purple);
+    width: 443.5px;
+}
+
+.technology-figure {
+    position: absolute;
+    right: 0px;
+    bottom: 96.5px;
+}
