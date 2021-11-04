@@ -58,3 +58,28 @@ header {
     font-weight: 600;
     margin-right: 0.65rem;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        margin-top: 0;
+        margin-left: 39px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .website-nav {
+        padding-right: 0;
+        padding: 2.4rem 1rem;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        margin: 1rem;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+}

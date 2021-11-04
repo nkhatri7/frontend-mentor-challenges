@@ -61,6 +61,7 @@ button {
     color: var(--black);
     font-family: 'Bellefair', sans-serif;
     font-size: 32px;
+    letter-spacing: 2px;
     font-weight: lighter;
 }
 
@@ -68,4 +69,44 @@ button:hover {
     cursor: pointer;
     box-shadow: 0 0 0 75px rgba(255, 255, 255, 0.1036);
     transition: box-shadow 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: url("../../assets/home/background-home-tablet.jpg") no-repeat;
+        background-size: 768px 1024px;
+    }
+
+    .website-nav {
+        background-color: #FFFFFF08;
+        backdrop-filter: blur(1000px);
+    }
+
+    main {
+        flex-direction: column;
+        margin-top: 6rem;
+    }
+
+    .main-text {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    h1 {
+        padding: 0.5rem;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        height: 242px;
+        width: 242px;
+        margin-top: 10rem;
+    }
 }
