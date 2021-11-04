@@ -7,12 +7,10 @@ body {
 
 main {
     margin-top: 4.7rem;
-    display: flex;
-    padding-bottom: 11rem;
-}
-
-.main-content {
     margin-left: 10.4rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 11rem;
 }
 
 h2 {
@@ -30,6 +28,7 @@ h2 span {
 .main-body-content {
     margin-top: 8.6rem;
     display: flex;
+    align-items: flex-start;
 }
 
 .technology-buttons {
@@ -92,4 +91,80 @@ h1 {
     position: absolute;
     right: 0px;
     bottom: 96.5px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: url("../../assets/technology/background-technology-tablet.jpg");
+        background-size: 768px 1024px;
+    }
+
+    main {
+        margin-top: 2rem;
+        width: 100vw;
+        height: 90vh;
+        margin-left: 0;
+        padding-bottom: 0;
+    }
+
+    h2 {
+        margin-left: 2.4rem;
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 4rem;
+    }
+
+    .technology-figure {
+        position: relative;
+        bottom: 0;
+    }
+
+    .technology-img {
+        max-height: 300px;
+        width: 100%;
+    }
+
+    .main-body-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .technology-buttons {
+        flex-direction: row;
+        margin-right: 0;
+    }
+
+    .technology-button {
+        height: 60px;
+        width: 60px;
+        font-size: 24px;
+    }
+
+    .technology-button:not(.technology-button:last-child) {
+        margin-right: 1rem;
+    }
+
+    .text-content {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .body-text {
+        font-size: 16px;
+        max-width: 438px;
+        line-height: 28px;
+    }
 }

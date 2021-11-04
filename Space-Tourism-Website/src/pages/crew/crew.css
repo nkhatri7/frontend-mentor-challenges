@@ -16,7 +16,7 @@ main {
     height: 685px;
 }
 
-.main-text-content {
+.main-content {
     margin-left: 1rem;
     position: relative;
 }
@@ -88,4 +88,77 @@ h1 {
 
 .option-circle:not(.active-option):hover {
     background-color: rgba(255, 255, 255, 0.5001);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: linear-gradient(0deg, #0b0d1770, #0b0d1770), url("../../assets/crew/background-crew-tablet.jpg") no-repeat;
+        background-size: 768px 1024px;
+    }
+
+    main {
+        margin-top: 2rem;
+        width: 90vw;
+        flex-direction: column;
+        height: 90vh;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    .main-text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 0.7rem;
+    }
+
+    .body-text {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 77vw;
+    }
+
+    .options {
+        position: relative;
+        bottom: 0;
+        margin-top: 2rem;
+    }
+
+    .option-circle {
+        height: 10px;
+        width: 10px;
+        margin-right: 16px;
+    }
+
+    .crew-figure {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    .crew-img {
+        height: 532px;
+        width: 100%;
+    }
 }

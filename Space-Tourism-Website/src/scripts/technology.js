@@ -28,7 +28,10 @@ window.addEventListener('load', () => {
             // Get technology details from JSON file
             const name = data.technology[index].name;
             const description = data.technology[index].description;
-            const img = data.technology[index].images.portrait;
+            let img = data.technology[index].images.portrait;
+            if (window.screen.width.valueOf() <= 768) {
+                img = data.technology[index].images.landscape;
+            }
             
             // Update DOM elements
             technologyName.innerText = `${name.toUpperCase()}`;

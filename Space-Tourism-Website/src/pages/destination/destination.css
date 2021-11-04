@@ -106,3 +106,73 @@ h4 {
 h3 {
     font-size: 28px;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        background: url("../../assets/destination/background-destination-tablet.jpg") no-repeat;
+        background-size: 768px 1024px;
+    }
+
+    main {
+        margin-top: 2rem;
+        width: 90vw;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .destination-header-image {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    .destination-figure {
+        margin-top: 3rem;
+        margin-left: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .destination-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .destination-main-content {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 75vw;
+    }
+
+    h1 {
+        font-size: 80px;
+        margin-bottom: 0;
+    }
+    
+    .body-text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .destination-stat:first-child {
+        margin-right: 5rem;
+    }
+}
