@@ -100,7 +100,7 @@ h1 {
         margin-top: 2rem;
         width: 90vw;
         flex-direction: column;
-        height: 90vh;
+        height: calc(100vh - 94.78px - 2rem);
     }
     
     .main-content {
