@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/assets/completed-screenshot/completed-desktop-home.png)
+![](./completed-screenshot/completed-desktop-home.png)
 
 ### Links
 
