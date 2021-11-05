@@ -52,7 +52,7 @@ p {
     height: 100%;
 }
 
-button {
+.explore-btn {
     height: 274px;
     width: 274px;
     border-radius: 50%;
@@ -65,7 +65,7 @@ button {
     font-weight: lighter;
 }
 
-button:hover {
+.explore-btn:hover {
     cursor: pointer;
     box-shadow: 0 0 0 75px rgba(255, 255, 255, 0.1036);
     transition: box-shadow 0.4s ease-in-out;
@@ -106,7 +106,7 @@ button:hover {
         line-height: 28px;
     }
 
-    button {
+    .explore-btn {
         height: 242px;
         width: 242px;
         margin-top: 11rem;
@@ -139,10 +139,15 @@ button:hover {
         line-height: 25px;
     }
 
-    button {
+    .explore-btn {
         height: 150px;
         width: 150px;
         font-size: 20px;
         letter-spacing: 1.25px;
+    }
+
+    .website-nav {
+        background-color: #FFFFFF04;
+        backdrop-filter: blur(40px);
     }
 }
