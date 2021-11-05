@@ -85,6 +85,7 @@ button:hover {
     main {
         flex-direction: column;
         margin-top: 6rem;
+        padding-bottom: 0;
     }
 
     .main-text {
@@ -109,5 +110,39 @@ button:hover {
         height: 242px;
         width: 242px;
         margin-top: 11rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url("../../assets/home/background-home-mobile.jpg") no-repeat;
+        background-size: 375px 812px;
+    }
+
+    main {
+        margin-top: 3.5rem;
+        width: 85vw;
+    }
+
+    h2 {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+
+    h1 {
+        font-size: 80px;
+        padding: 1rem;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    button {
+        height: 150px;
+        width: 150px;
+        font-size: 20px;
+        letter-spacing: 1.25px;
     }
 }

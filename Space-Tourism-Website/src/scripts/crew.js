@@ -32,12 +32,13 @@ window.addEventListener('load', () => {
     });
 
     function handleSwipeEvent() {
-        // Lifted from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
-        document.addEventListener('touchstart', handleTouchStart, false);        
-        document.addEventListener('touchmove', handleTouchMove, false);
+        // Adapted from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+        const swipableArea = document.getElementById('main');
+        swipableArea.addEventListener('touchstart', handleTouchStart, false);        
+        swipableArea.addEventListener('touchmove', handleTouchMove, false);
 
-        var xDown = null;                                                        
-        var yDown = null;
+        let xDown = null;                                                        
+        let yDown = null;
 
         let index = 0;
 
@@ -56,50 +57,46 @@ window.addEventListener('load', () => {
                 return;
             }
         
-            var xUp = evt.touches[0].clientX;                                    
-            var yUp = evt.touches[0].clientY;
+            const xUp = evt.touches[0].clientX;                                    
+            const yUp = evt.touches[0].clientY;
         
-            var xDiff = xDown - xUp;
-            var yDiff = yDown - yUp;
-                                                                                
-            if (Math.abs( xDiff ) > Math.abs( yDiff )) {
+            const xDiff = xDown - xUp;
+            const yDiff = yDown - yUp;
+            
+            // If there is a horizontal swipe
+            if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                // Confirming index in case user taps an option and then starts swiping
+                options.forEach(option => {
+                    if (option.classList.contains('active-option')) {
+                        index = parseInt(option.dataset.index);
+                    }
+                });
                 if ( xDiff > 0 ) {
-                    // right swipe
+                    // Right swipe
                     if (index <= 2) {
                         index++;
-                    }
-
-                    // Update active CSS style
-                    options.forEach(option => {
-                        option.classList.remove('active-option');
-                        if (parseInt(option.dataset.index) === index) {
-                            option.classList.add('active-option');
-                        }
-                    });
-
-                    updateContent(index);
+                    }    
                 } else {
-                    // left swipe
+                    // Left swipe
                     if (index > 0) {
                         index--;
                     }
-
-                    // Update active CSS style
-                    options.forEach(option => {
-                        option.classList.remove('active-option');
-                        if (parseInt(option.dataset.index) === index) {
-                            option.classList.add('active-option');
-                        }
-                    });
-
-                    updateContent(index);
-                }                       
+                }
+                handleSwipeCSSChange(index);
+                updateContent(index);                
             }
             xDown = null;
             yDown = null;                                             
         }
+    }
 
-        updateContent(index);
+    function handleSwipeCSSChange(index) {
+        options.forEach(option => {
+            option.classList.remove('active-option');
+            if (parseInt(option.dataset.index) === index) {
+                option.classList.add('active-option');
+            }
+        });
     }
 
     async function updateContent(index) {

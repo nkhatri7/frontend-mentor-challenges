@@ -47,8 +47,11 @@ h2 span {
     font-weight: lighter;
     letter-spacing: 2.7px;
     color: var(--light-purple);
-    margin-right: 1.8rem;
     padding: 0.7rem 0;
+}
+
+.destination-tab:not(.destination-tab:last-child) {
+    margin-right: 1.8rem;
 }
 
 .destination-tab:hover {
@@ -174,5 +177,75 @@ h3 {
 
     .destination-stat:first-child {
         margin-right: 5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url("../../assets/destination/background-destination-mobile.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        margin-top: 1rem;
+    }
+
+    .destination-header-image {
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+
+    .destination-figure {
+        margin-top: 2rem;
+    }
+
+    .destination-img {
+        height: 170px;
+        width: 170px;
+    }
+
+    .destination-main-content {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .destination-tab {
+        font-size: 14px;
+        letter-spacing: 2.36px;
+        padding: 0.5rem 0;
+    }
+
+    .destination-tab:not(.destination-tab:last-child) {
+        margin-right: 1rem;
+    }
+
+    h1 {
+        font-size: 56px;
+        margin-top: 1rem;
+    }
+
+    .body-text {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 85vw;
+        margin-bottom: 2rem;
+    }
+
+    .destination-stats {
+        flex-direction: column;
+    }
+
+    .destination-stat:first-child {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    h4 {
+        font-size: 14px;
+        margin-bottom: 0.7rem;
     }
 }

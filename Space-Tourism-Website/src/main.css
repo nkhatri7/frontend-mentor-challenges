@@ -59,6 +59,10 @@ header {
     margin-right: 0.65rem;
 }
 
+.menu-icon {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     header {
         margin-top: 0;
@@ -81,5 +85,25 @@ header {
 
     .nav-link span {
         display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .website-nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+    .logo-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    header {
+        margin-left: 0;
+        padding: 2rem 2rem 0 2rem;
     }
 }
