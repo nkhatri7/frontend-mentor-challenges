@@ -1,0 +1,7 @@
+:root {
+  --theme-one-main-background: hsl(222, 26%, 31%);
+}
+
+.App {
+  background-color: var(--theme-one-main-background);
+}
