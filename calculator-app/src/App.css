@@ -1,7 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
 :root {
   --theme-one-main-background: hsl(222, 26%, 31%);
+  --theme-one-keypad-background: hsl(223, 31%, 20%);
+  --theme-one-screen-background: hsl(224, 36%, 15%);
+  --theme-one-reset-key-background: hsl(225, 21%, 49%);
+  --theme-one-reset-key-shadow: hsl(224, 28%, 35%);
+  --theme-one-equal-key-background: hsl(6, 63%, 50%);
+  --theme-one-equal-key-shadow: hsl(6, 70%, 34%);
+  --theme-one-key-background: hsl(30, 25%, 89%);
+  --theme-one-key-shadow: hsl(28, 16%, 65%);
+  --theme-one-key-text: hsl(221, 14%, 31%);
+
+  --theme-two-main-background: hsl(0, 0%, 90%);
+  --theme-two-keypad-background: hsl(0, 5%, 81%);
+  --theme-two-screen-background: hsl(0, 0%, 93%);
+  --theme-two-reset-key-background: hsl(185, 42%, 37%);
+  --theme-two-reset-key-shadow: hsl(185, 58%, 25%);
+  --theme-two-equal-key-background: hsl(25, 98%, 40%);
+  --theme-two-equal-key-shadow: hsl(25, 99%, 27%);
+  --theme-two-key-background: hsl(45, 7%, 89%);
+  --theme-two-key-shadow: hsl(35, 11%, 61%);
+  --theme-two-key-text: hsl(60, 10%, 19%);
+
+  --theme-three-main-background: hsl(268, 75%, 9%);
+  --theme-three-keypad-background: hsl(268, 71%, 12%);
+  --theme-three-reset-key-background: hsl(281, 89%, 26%);
+  --theme-three-reset-key-shadow: hsl(285, 91%, 52%);
+  --theme-three-equal-key-background: hsl(176, 100%, 44%);
+  --theme-three-equal-key-shadow: hsl(177, 92%, 70%);
+  --theme-three-key-background: hsl(268, 47%, 21%);
+  --theme-three-key-shadow: hsl(290, 70%, 36%);
+  --theme-three-text: hsl(52, 100%, 62%);
+  --theme-three-equal-key-text: hsl(198, 20%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
+  font-family: 'Spartan', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+}
+
+.App-theme-one {
+  color: white;
   background-color: var(--theme-one-main-background);
+}
+
+.App-theme-two {
+  color: var(--theme-two-key-text);
+  background-color: var(--theme-two-main-background);
+}
+
+.App-theme-three {
+  color: var(--theme-three-text);
+  background-color: var(--theme-three-main-background);
 }

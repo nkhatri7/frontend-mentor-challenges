@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    margin-bottom: 1.5rem;
+}
+
+.theme-text {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    margin-top: 1.2rem;
+}
+
+.theme-toggle {
+    display: flex;
+}
+
+.theme-toggle-container {
+    display: flex;
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-container p {
+    font-size: 0.8rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-btn {
+    height: 10px;
+    width: 10px;
+    border: none;
+    border-radius: 50%;
+    margin-inline: 0.5rem;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+/* Themes */
+
+.theme-one-active-toggle {
+    background-color: var(--theme-one-equal-key-background);
+}
+
+.theme-two-active-toggle {
+    background-color: var(--theme-two-equal-key-background);
+}
+
+.theme-three-active-toggle {
+    background-color: var(--theme-three-equal-key-background);
+}
+
+.theme-two-toggle {
+    background-color: grey;
+}

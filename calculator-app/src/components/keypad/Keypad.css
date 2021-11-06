@@ -1,0 +1,104 @@
+.keypad-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 3.8rem);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.key {
+    border-radius: 5px;
+    border: none;
+    font-family: 'Spartan', sans-serif;
+}
+
+.key:hover {
+    cursor: pointer;
+}
+
+.primary {
+    font-size: 2rem;
+}
+
+.secondary {
+    font-size: 1.2rem;
+}
+
+.reset {
+    grid-column: 1 / 3;
+}
+
+.equal {
+    font-size: 2rem;
+    grid-column: 3 / 5;
+}
+
+/* themes */
+.theme-one-keypad {
+    background-color: var(--theme-one-keypad-background);
+}
+
+.theme-one-primary {
+    color: var(--theme-one-key-text);
+    background-color: var(--theme-one-key-background);
+    box-shadow: 0 4px var(--theme-one-key-shadow);
+}
+
+.theme-one-secondary {
+    color: white;
+    background-color: var(--theme-one-reset-key-background);
+    box-shadow: 0 4px var(--theme-one-reset-key-shadow);
+}
+
+.theme-one-equal {
+    color: white;
+    background-color: var(--theme-one-equal-key-background);
+    box-shadow: 0 4px var(--theme-one-equal-key-shadow);
+}
+
+.theme-two-keypad {
+    background-color: var(--theme-two-keypad-background);
+}
+
+.theme-two-primary {
+    color: var(--theme-two-key-text);
+    background-color: var(--theme-two-key-background);
+    box-shadow: 0 4px var(--theme-two-key-shadow);
+}
+
+.theme-two-secondary {
+    color: white;
+    background-color: var(--theme-two-reset-key-background);
+    box-shadow: 0 4px var(--theme-two-reset-key-shadow);
+}
+
+.theme-two-equal {
+    color: white;
+    background-color: var(--theme-two-equal-key-background);
+    box-shadow: 0 4px var(--theme-two-equal-key-shadow);
+}
+
+.theme-three-keypad {
+    background-color: var(--theme-three-keypad-background);
+}
+
+.theme-three-primary {
+    color: var(--theme-three-text);
+    background-color: var(--theme-three-key-background);
+    box-shadow: 0 4px var(--theme-three-key-shadow);
+}
+
+.theme-three-secondary {
+    color: white;
+    background-color: var(--theme-three-reset-key-background);
+    box-shadow: 0 4px var(--theme-three-reset-key-shadow);
+}
+
+.theme-three-equal {
+    color: var(--theme-three-equal-key-text);
+    background-color: var(--theme-three-equal-key-background);
+    box-shadow: 0 4px var(--theme-three-equal-key-shadow);
+}
