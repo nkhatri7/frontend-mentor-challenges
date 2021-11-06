@@ -26,3 +26,15 @@
 .theme-three-screen {
     background-color: var(--theme-three-keypad-background);
 }
+
+@media screen and (max-width: 500px) {
+    .screen-container {
+        width: 20rem;
+        height: 5rem;
+    }
+
+    .screen-text {
+        font-size: 2rem;
+        padding-top: 1.5rem;
+    }
+}

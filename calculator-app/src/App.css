@@ -50,8 +50,8 @@
 .wrapper {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  margin-top: 3rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .App-theme-one {

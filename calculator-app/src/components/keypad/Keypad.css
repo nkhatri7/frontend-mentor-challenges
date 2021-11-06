@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 3.8rem);
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
     width: 100%;
     border-radius: 10px;
     padding: 1.5rem;
@@ -101,4 +101,23 @@
     color: var(--theme-three-equal-key-text);
     background-color: var(--theme-three-equal-key-background);
     box-shadow: 0 4px var(--theme-three-equal-key-shadow);
+}
+
+@media screen and (max-width: 500px) {
+    .keypad-container {
+        column-gap: 0.7rem;
+        row-gap: 1rem;
+    }
+
+    .primary {
+        font-size: 1.8rem;
+    }
+
+    .secondary {
+        font-size: 1rem;
+    }
+
+    .equal {
+        font-size: 1.8rem;
+    }
 }
