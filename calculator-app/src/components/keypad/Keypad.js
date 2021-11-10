@@ -71,11 +71,11 @@ export class Keypad extends Component {
 }
 
 Keypad.propTypes = {
-    handleDigitClick: PropTypes.func,
-    handleDeleteClick: PropTypes.func,
-    handleOperatorClick: PropTypes.func,
-    handleResetClick: PropTypes.func,
-    handleEqualClick: PropTypes.func,
+    handleDigitClick: PropTypes.func.isRequired,
+    handleDeleteClick: PropTypes.func.isRequired,
+    handleOperatorClick: PropTypes.func.isRequired,
+    handleResetClick: PropTypes.func.isRequired,
+    handleEqualClick: PropTypes.func.isRequired,
     theme: PropTypes.string.isRequired
 };
 
