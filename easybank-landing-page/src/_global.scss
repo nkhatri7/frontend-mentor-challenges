@@ -1,0 +1,26 @@
+// COLOURS
+$darkblue: hsl(233, 26%, 24%);
+$limegreen: hsl(136, 65%, 51%);
+$brightcyan: hsl(192, 70%, 51%);
+$grayishblue: hsl(233, 8%, 62%);
+$lightgreyishblue: hsl(220, 16%, 96%);
+$lightgrey: hsl(0, 0%, 98%);
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin heading {
+    color: $darkblue;
+    font-weight: 300;
+}
+
+@mixin body-text {
+    color: $grayishblue;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}

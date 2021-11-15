@@ -1,0 +1,46 @@
+@import '../../global';
+
+.footer {
+    background-color: $darkblue;
+    @include flex-center;
+    padding: 2.5rem 0;
+    > .logo-socials {
+        @include flex-center;
+        > .social-icons {
+            margin-top: 2rem;
+            > .social-link {
+                margin: 0 0.5rem;
+                > img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    > .footer-links {
+        @include flex-center;
+        margin: 1.5rem 0;
+        > .footer-links-column {
+            @include flex-center;
+            > .footer-link {
+                text-decoration: none;
+                color: white;
+                font-size: 0.95rem;
+                margin: 0.4rem 0;
+            }
+        }
+    }
+
+    > .footer-end {
+        @include flex-center;
+        > .cta-footer {
+            font-size: 0.9rem;
+            width: 9.8rem;
+            height: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+        > .copyright {
+            @include body-text;
+        }
+    }
+}

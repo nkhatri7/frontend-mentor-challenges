@@ -1,0 +1,34 @@
+@import '../../global';
+
+.features {
+    background-color: $lightgreyishblue;
+    @include flex-center;
+    text-align: center;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+    > .wrapper {
+        max-width: 90vw;
+        > h1 {
+            @include heading;
+            font-size: 2rem;
+        }
+        > .features-body {
+            @include body-text;
+            margin: 0.8rem 0 3rem 0;
+        }
+        > .features-container {
+            @include flex-center;
+            > .feature {
+                margin-bottom: 2rem;
+                > h2 {
+                    @include heading;
+                    font-size: 1.2rem;
+                    margin: 1rem 0;
+                }
+                > .feature-description {
+                    @include body-text;
+                }
+            }
+        }
+    }
+}

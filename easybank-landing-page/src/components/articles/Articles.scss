@@ -1,0 +1,45 @@
+@import '../../global';
+
+.articles {
+    @include flex-center;
+    background-color: $lightgrey;
+    padding: 5rem 0;
+    > h1 {
+        @include heading;
+        font-size: 1.9rem;
+    }
+    > .articles-container {
+        margin-top: 1.8rem;
+        > .article {
+            max-width: 90vw;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            > .article-img {
+                max-height: 13rem;
+                overflow: hidden;
+                border-radius: 5px 5px 0 0;
+                > img {
+                    max-width: 90vw;
+                }
+            }
+            > .article-text {
+                padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+                > .author {
+                    @include body-text;
+                    font-size: 0.65rem;
+                }
+                > h2 {
+                    @include heading;
+                    font-size: 1.1rem;
+                    padding: 0.2rem 0 0.5rem 0;
+                }
+                > .article-content {
+                    @include body-text;
+                    font-size: 0.85rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
+}

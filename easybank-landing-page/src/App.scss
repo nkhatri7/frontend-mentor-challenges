@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap');
+@import './global';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+}
+
+.cta {
+  background: linear-gradient(to right, $limegreen, $brightcyan);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  height: 2.6rem;
+  width: 9.5rem;
+}

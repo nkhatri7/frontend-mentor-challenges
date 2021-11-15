@@ -1,0 +1,37 @@
+@import '../../global';
+
+.hero {
+    @include flex-center;
+    z-index: 1;
+    margin-bottom: 5.5rem;
+    > .mockup-container {
+        width: 100%;
+        @include flex-center;
+        background: url('../../assets/bg-intro-mobile.svg') no-repeat center;
+        > .hero-fig {
+            margin-top: -7.5rem;
+            > img {
+                max-width: 90vw;
+            }
+        }
+    }
+    
+    > .hero-main {
+        @include flex-center;
+        text-align: center;
+        margin-top: 1rem;
+        max-width: 90vw;
+        > h1 {
+            @include heading;
+            font-size: 2.5rem;
+        }
+        > .hero-body {
+            @include body-text;
+            margin: 0.9rem 0 1.5rem 0;
+        }
+        > .cta-hero {
+            font-size: 0.9rem;
+            z-index: 3;
+        }
+    }
+}
