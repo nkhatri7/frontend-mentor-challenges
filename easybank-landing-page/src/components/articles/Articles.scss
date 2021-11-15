@@ -10,6 +10,7 @@
     }
     > .articles-container {
         margin-top: 1.8rem;
+        @include flex-center;
         > .article {
             max-width: 90vw;
             background-color: white;
@@ -38,6 +39,27 @@
                     @include body-text;
                     font-size: 0.85rem;
                     line-height: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .articles {
+        align-items: flex-start;
+        padding: 5rem 10vw;
+        > h1 {
+            font-size: 2.5rem;
+        }
+        > .articles-container {
+            margin-top: 3.5rem;
+            flex-direction: row;
+            > .article {
+                max-width: calc(8rem + 10vw);
+                margin-bottom: 0;
+                &:not(:first-child) {
+                    margin-left: 1.5rem;
                 }
             }
         }

@@ -9,9 +9,8 @@
         > .social-icons {
             margin-top: 2rem;
             > .social-link {
-                margin: 0 0.5rem;
-                > img {
-                    height: 24px;
+                &:not(:last-child) {
+                    margin-right: 1rem;
                 }
             }
         }
@@ -41,6 +40,42 @@
         }
         > .copyright {
             @include body-text;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5rem 10rem;
+        > .logo-socials {
+            align-items: flex-start;
+            > .social-icons {
+                margin-top: 3.5rem;
+                > .social-link:hover {
+                    > svg > path {
+                        fill: $limegreen;
+                    }
+                }
+            }
+        }
+
+        > .footer-links {
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 0;
+            > .footer-links-column {
+                align-items: flex-start;
+                margin: 0 5rem;
+                > .footer-link:hover {
+                    color: $limegreen;
+                }
+            }
+        }
+
+        > .footer-end {
+            align-items: flex-end;
         }
     }
 }

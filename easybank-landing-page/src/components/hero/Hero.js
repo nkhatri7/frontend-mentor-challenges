@@ -1,14 +1,16 @@
 import React from 'react';
 import './Hero.scss';
 import mockups from '../../assets/image-mockups.png';
+import mobileBg from '../../assets/bg-intro-mobile.svg';
+import desktopBg from '../../assets/bg-intro-desktop.svg';
 
 function Hero() {
     return (
         <section className="hero">
             <div className="mockup-container">
-                <figure className="hero-fig">
-                    <img src={mockups} alt="Mockups" />
-                </figure>
+                <img src={mockups} alt="Mockups" className="mockup" />
+                <img src={mobileBg} alt="mobile background" className="mobile-bg" />
+                <img src={desktopBg} alt="desktop background" className="desktop-bg" />
             </div>
             <section className="hero-main">
                 <h1>Next generation digital banking</h1>

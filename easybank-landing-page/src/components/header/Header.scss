@@ -59,13 +59,12 @@ header {
 
 .mobile-nav-open {
     transform: translateY(0);
-    // transition: 0.5s;
 }
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.25);
     position: absolute;
-    opacity: 0;
+    display: none;
     z-index: 2;
     width: 100%;
     margin-left: -1.2rem;
@@ -74,5 +73,32 @@ header {
 }
 
 .overlay-active {
-    opacity: 1;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 1.2rem 10vw;
+        > .mobile-menu {
+            display: none;
+        }
+        > nav {
+            display: inline-block;
+            > .nav-link {
+                color: $grayishblue;
+                font-size: 1rem;
+                margin: 0 1rem;
+                padding: 1.85rem 0;
+                &:hover {
+                    color: $darkblue;
+                    // https://stackoverflow.com/questions/23751274/can-we-set-a-gradient-color-to-border-bottom-property
+                    background: $gradient left bottom no-repeat;
+                    background-size: 100% 4px;
+                }
+            }
+        }
+        > .cta-header {
+            display: inline-block;
+        }
+    }
 }

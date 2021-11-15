@@ -2,12 +2,12 @@
 
 .features {
     background-color: $lightgreyishblue;
-    @include flex-center;
     text-align: center;
-    padding-top: 3.5rem;
-    padding-bottom: 2rem;
+    padding: 3.5rem 0 2rem 0;
+    @include flex-center;
     > .wrapper {
         max-width: 90vw;
+        @include flex-center;
         > h1 {
             @include heading;
             font-size: 2rem;
@@ -27,6 +27,38 @@
                 }
                 > .feature-description {
                     @include body-text;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .features {
+        padding: 6.5rem 0;
+        > .wrapper {
+            text-align: left;
+            align-items: flex-start;
+            > h1 {
+                font-size: 2.5rem;
+            }
+            > .features-body {
+                @include desktop-body-font-size;
+                max-width: 45rem;
+                margin: 1.5rem 0 5rem 0;
+            }
+            > .features-container {
+                flex-direction: row;
+                > .feature {
+                    margin: 0 1rem;
+                    > h2 {
+                        font-size: 1.4rem;
+                        margin: 2rem 0 1.5rem 0;
+                    }
+                    > .feature-description {
+                        font-size: 1rem;
+                        max-width: 16.5rem;
+                    }
                 }
             }
         }

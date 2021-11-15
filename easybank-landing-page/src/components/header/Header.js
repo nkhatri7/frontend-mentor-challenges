@@ -13,6 +13,18 @@ function Header() {
     }
 
     useEffect(() => {
+        if (window.innerWidth <= 500) {
+            nav.current.classList.add('mobile-nav');
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 500) {
+                nav.current.classList.add('mobile-nav');
+            } else {
+                nav.current.classList.remove('mobile-nav');
+            }
+        });
+
         if (mobileMenu) {
             menuToggle.current.classList.add('hamburger-clicked');
             nav.current.classList.add('mobile-nav-open');
@@ -32,7 +44,7 @@ function Header() {
             <button className="mobile-menu" onClick={handleMenuToggle} ref={menuToggle}>
                 <span className="hidden">MENU</span>
             </button>
-            <nav className="mobile-nav" ref={nav}>
+            <nav ref={nav}>
                 {/* eslint-disable-next-line */}
                 <a href="#" className="nav-link">Home</a>
                 {/* eslint-disable-next-line */}

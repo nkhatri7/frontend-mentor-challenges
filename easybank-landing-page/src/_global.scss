@@ -5,6 +5,7 @@ $brightcyan: hsl(192, 70%, 51%);
 $grayishblue: hsl(233, 8%, 62%);
 $lightgreyishblue: hsl(220, 16%, 96%);
 $lightgrey: hsl(0, 0%, 98%);
+$gradient: linear-gradient(to right, $limegreen, $brightcyan);
 
 @mixin flex-center {
     display: flex;
@@ -23,4 +24,8 @@ $lightgrey: hsl(0, 0%, 98%);
     font-size: 0.9rem;
     font-weight: 500;
     line-height: 1.5rem;
+}
+
+@mixin desktop-body-font-size {
+    font-size: 1.2rem;
 }

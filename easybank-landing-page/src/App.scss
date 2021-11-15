@@ -13,7 +13,7 @@
 }
 
 .cta {
-  background: linear-gradient(to right, $limegreen, $brightcyan);
+  background: $gradient;
   color: white;
   border: none;
   border-radius: 50px;
@@ -21,4 +21,11 @@
   font-weight: 700;
   height: 2.6rem;
   width: 9.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cta:hover {
+    cursor: pointer;
+    opacity: 0.75;
+  }
 }
