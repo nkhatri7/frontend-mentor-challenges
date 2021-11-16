@@ -43,7 +43,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem 2rem;
-    z-index: 2;
 }
 
 .logo > a > img {
@@ -62,7 +61,7 @@ header {
     width: 25px;
     background-color: none;
     border: none;
-    z-index: 3;
+    z-index: 2;
 }
 
 .menu-toggle-open {
@@ -78,7 +77,7 @@ header {
     background-color: white;
     border-radius: 5px;
     width: 85%;
-    z-index: 3;
+    z-index: 2;
     left: 50%;
     transform: translate(-50%, -200px);
     transition: 0.5s;
@@ -298,11 +297,6 @@ header {
 /* SIMPLIFY SECTION */
 
 .simplify {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: var(--bright-red);
 }
 
@@ -311,6 +305,11 @@ header {
     font-size: 1.5rem;
     padding: 5.3rem 2.2rem;
     background: url('./images/bg-simplify-section-mobile.svg') no-repeat center left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .cta-simplify {
@@ -341,6 +340,10 @@ footer {
     width: 100%;
 }
 
+.signup-copyright {
+    width: 100%;
+}
+
 .signup {
     display: flex;
     justify-content: space-between;
@@ -351,7 +354,7 @@ footer {
 .email {
     border: none;
     height: 40px;
-    width: 15rem;
+    width: calc(5rem + 40vw);
     border: none;
     border-radius: 50px;
     padding-left: 1.5rem;
@@ -429,6 +432,10 @@ footer {
 .copyright {
     color: var(--dark-greyish-blue);
     font-size: 0.8rem;
+}
+
+.copyright-desktop {
+    display: none;
 }
 
 .attribution { 

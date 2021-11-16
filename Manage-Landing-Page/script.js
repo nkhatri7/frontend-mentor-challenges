@@ -11,14 +11,22 @@ const errorMessage = document.querySelector('.error-message');
 // Handle mobile navigation
 menuToggle.addEventListener('click', handleMobileMenuToggle);
 navLinks.forEach(navLink => {
-    navLink.addEventListener('click', handleMobileMenuToggle);
+    navLink.addEventListener('click', handleNavClick);
 });
 
 function handleMobileMenuToggle() {
+    
     menuToggle.classList.toggle('menu-toggle-open');
     nav.classList.toggle('mobile-nav-open');
     overlay.classList.toggle('overlay-active');
     document.body.classList.toggle('no-scroll');
+}
+
+function handleNavClick() {
+    menuToggle.classList.remove('menu-toggle-open');
+    nav.classList.remove('mobile-nav-open');
+    overlay.classList.remove('overlay-active');
+    document.body.classList.remove('no-scroll');
 }
 
 if (window.screen.width.valueOf() < 768) {
@@ -78,14 +86,14 @@ function handleSwipeEvent() {
                     index--;
                 }
             }
-            handleSwipeCSSChange(index);
+            updateIndicator(index);
             updateTestimonialContent(index);                
         }
         xDown = null;
         yDown = null;                                             
     }
 
-    function handleSwipeCSSChange(index) {
+    function updateIndicator(index) {
         testimonialIndicators.forEach(indicator => {
             indicator.classList.remove('active-indicator');
             if (parseInt(indicator.dataset.index) === index) {
@@ -109,9 +117,9 @@ function handleSwipeEvent() {
         let valid = false;
         const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         
-        if (email === "") {
+        if (email.trim() === "") {
             errorMessage.innerText = "Oops! Looks like you didn't enter anything.";
-        } else if (!emailRegex.test(email.toLowerCase())) {
+        } else if (!emailRegex.test(email.toLowerCase().trim())) {
             errorMessage.innerText = "Please insert a valid email.";
         } else {
             errorMessage.innerText = '';

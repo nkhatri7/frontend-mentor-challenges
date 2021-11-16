@@ -1,0 +1,313 @@
+@media screen and (min-width: 700px) {
+
+    body {
+        background-size: 30rem 30rem;
+        background-position: top right -150px;
+    }
+
+    /* HERO */
+    .hero {
+        background: none !important;
+    }
+
+    /* SIMPLIFY SECTION */
+    .simplify-wrapper {
+        background: url('./images/bg-simplify-section-desktop.svg');
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .simplify-wrapper > h2 {
+        max-width: 30rem;
+    }
+
+    /* FOOTER */
+    .signup {
+        justify-content: center;
+    }
+
+    .cta-footer {
+        margin-left: 2rem;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .footer-links-column {
+        margin: 0 5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-link {
+        margin: 0 1.5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .cta:hover {
+        cursor: pointer;
+        filter: brightness(150%);
+        transition: filter 0.5s;
+    }
+
+    /* HEADER */
+    .cta-header {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        position: relative;
+        background-color: transparent;
+        width: auto;
+        display: block;
+        transition: none;
+        left: auto;
+        transform: translate(0, 0);
+        transition: none;
+    }
+
+    .nav > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        color: var(--dark-greyish-blue);
+        font-size: 0.9rem;
+    }
+
+    .nav-link {
+        margin: 0 1rem;
+    }
+
+    .nav-link:hover {
+        cursor: pointer;
+        filter: brightness(120%);
+        transition: filter 0.5s;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-graphic > img {
+        max-width: calc(10rem + 30vw);
+    }
+
+    .hero-text-content {
+        text-align: left;
+        max-width: 25rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-container {
+        /* https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6 */
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 4rem 0;
+        padding-left: calc(95rem - 100vw);
+    }
+
+    .testimonial {
+        min-width: 21.2rem;
+        position: relative;
+        opacity: 1;
+        margin: 0 1rem;
+    }
+
+    .active-testimonial {
+        transition: none;
+    }
+
+    .testimonial-swipe-indicators {
+        display: none;
+    }
+
+    /* FOOTER */
+    .email {
+        width: 25rem;
+    }
+
+    .cta-footer {
+        width: 7rem;
+    }
+
+    .social-link:hover .fab {
+        color: var(--bright-red);
+        transition: 0.5s;
+    }
+
+    .footer-link:hover a {
+        color: var(--bright-red);
+        transition: 0.5s;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: 40rem 40rem;
+        background-position: top right -140px;
+    }
+
+    /* HEADER */
+    header {
+        padding: 2.5rem 10vw;
+    }
+
+    .logo > a > img {
+        min-width: 9rem;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 4rem 10vw 6rem 10vw;
+    }
+
+    .hero-text-content {
+        max-width: 40rem;
+    }
+
+    .hero-text-content > h1 {
+        font-size: 3.4rem;
+        line-height: 4rem;
+    }
+
+    .hero-body {
+        max-width: 23rem;
+        margin: 2rem 0 2.5rem 0;
+    }
+
+    /* FEATURES */
+    .features {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 10vw;
+    }
+
+    .features-text-content {
+        text-align: left;
+        max-width: 30rem;
+    }
+
+    .features-text-content > h2 {
+        font-size: 2.4rem;
+    }
+
+    .features-text-content > p, .feature-body > p {
+        font-size: 1rem;
+    }
+
+    .features-text-content > p {
+        max-width: 22rem;
+    }
+
+    .features-container {
+        margin-top: 0;
+    }
+
+    .feature {
+        margin-left: 0;
+        max-width: 34rem;
+    }
+
+    .feature-heading {
+        background-color: transparent;
+    }
+
+    .feature-heading > h3 {
+        margin-left: 2rem;
+    }
+
+    .feature-body {
+        margin-left: 6.2rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+        margin: 3rem 0;
+    }
+
+    .testimonials > h2 {
+        font-size: 2.4rem;
+        margin-bottom: 4rem;
+    }
+
+    .testimonials-container {
+        padding: 2.5rem 0;
+        padding-left: calc(128rem - 100vw);
+    }
+
+    .testimonial {
+        min-width: 30rem;
+    }
+
+    /* SIMPLIFY SECTION */
+    .simplify-wrapper {
+        padding: 5.3rem 10vw;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        padding: 3rem 10vw 1rem 10vw;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .copyright-mobile {
+        display: none;
+    }
+
+    .copyright-desktop {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .footer-logo-socials {
+        margin: 0;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: max-content;
+    }
+
+    .social-icons {
+        margin: 4rem 0 0 0;
+        align-items: flex-start;
+    }
+
+    .social-link {
+        margin: 0 0.5rem;
+    }
+
+    .fab {
+        font-size: 1.2rem;
+    }
+
+    .signup-copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: max-content;
+    }
+
+    .email {
+        width: 13rem;
+        padding-left: 1rem;
+    }
+
+    .cta-footer {
+        width: 4rem;
+        margin-left: 0.5rem;
+    }
+}
