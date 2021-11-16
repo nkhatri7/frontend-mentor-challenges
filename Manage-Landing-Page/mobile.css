@@ -90,13 +90,17 @@ header {
 .nav > ul {
     list-style: none;
     text-align: center;
-    color: var(--dark-blue);
     font-weight: 700;
     padding: 1rem 0;
 }
 
 .nav-link {
     margin: 1.3rem 0;
+}
+
+.nav-link > a {
+    text-decoration: none;
+    color: var(--dark-blue);
 }
 
 .overlay {

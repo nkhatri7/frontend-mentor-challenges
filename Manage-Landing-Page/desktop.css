@@ -80,12 +80,15 @@
         justify-content: center;
         align-items: center;
         padding: 0;
-        color: var(--dark-greyish-blue);
         font-size: 0.9rem;
     }
 
     .nav-link {
         margin: 0 1rem;
+    }
+
+    .nav-link > a {
+        color: var(--dark-greyish-blue);
     }
 
     .nav-link:hover {
