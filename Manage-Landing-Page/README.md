@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://nkhatri7.github.io/Manage-Landing-Page/)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-and-vanilla-js-TTkoSoilo)
+- [Live Site URL](https://nkhatri7.github.io/Manage-Landing-Page/)
 
 ## My process
 
