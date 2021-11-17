@@ -70,6 +70,7 @@ h1 {
     width: max-content;
     background-color: var(--dark-desaturated-blue);
     border-radius: 10px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .shade {
