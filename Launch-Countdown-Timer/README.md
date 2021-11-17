@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-countdown-timer-built-with-vanilla-js-and-css-UgQqVbnTA)
+- [Live Site URL](https://nkhatri7.github.io/Launch-Countdown-Timer/)
 
 ## My process
 
