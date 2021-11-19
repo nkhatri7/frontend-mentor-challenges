@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --overlay: hsla(178, 100%, 50%, 0.5);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+
+body {
+    background-color: var(--main-bg);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 21rem;
+}
+
+.nft-fig {
+    height: max-content;
+    position: relative;
+}
+
+.nft-fig > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nft-name {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.nft-description {
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.nft-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.nft-price-container, .availability-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nft-price {
+    color: var(--cyan);
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.availability {
+    color: var(--soft-blue);
+    margin-left: 0.5rem;
+}
+
+hr {
+    outline: none !important;
+    border: 1px solid var(--line);
+}
+
+.creator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.creator > img {
+    max-width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+
+.creator > p {
+    color: var(--soft-blue);
+}
+
+.creator span {
+    color: white;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+}
+
+.attribution a { 
+    color: var(--cyan);
+    text-decoration-color: transparent;
+}
+
+@media screen and (min-width: 800px) {
+    .nft-fig:hover {
+        cursor: pointer;
+    }
+
+    .overlay {
+        display: inline-block;
+        position: absolute;
+        /* height is 98.635% because the figure has a slightly larger height than the image */
+        /* not sure why because I put height: max-content */
+        height: 98.635%;
+        width: 100%;
+        background: var(--overlay) url('./images/icon-view.svg') no-repeat center;
+        border-radius: 10px;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .nft-fig:hover .overlay {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .nft-name:hover, .creator span:hover {
+        cursor: pointer;
+        color: var(--cyan);
+        transition: 1s;
+    }
+
+    .attribution a:hover { 
+        text-decoration-color: var(--cyan);
+        transition: 0.5s;
+    }
+}
