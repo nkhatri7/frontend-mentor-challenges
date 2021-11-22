@@ -1,0 +1,12 @@
+@use '../../global' as g;
+
+.boost {
+    @include g.flex-center;
+    background: g.$dark-violet url('../../assets/bg-boost-mobile.svg') no-repeat;
+    padding: 6rem 0;
+    > h2 {
+        color: white;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+}

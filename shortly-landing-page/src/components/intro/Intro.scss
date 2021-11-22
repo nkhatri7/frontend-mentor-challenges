@@ -1,0 +1,24 @@
+@use '../../global' as g;
+
+.intro {
+    overflow-x: hidden;
+    padding-bottom: 11rem;
+    .intro-fig  {
+        margin-left: 1rem;
+        img {
+        max-width: 32rem;
+        }
+    }
+    .intro-main {
+        h1 {
+            font-size: 2.6rem;
+            line-height: 2.8rem;
+            margin-top: 2rem;
+        }
+        p {
+            color: g.$greyish-violet;
+            font-size: 1.1rem;
+            padding: 1.2rem 1.5rem 2rem 1.5rem;
+        }
+    }
+}

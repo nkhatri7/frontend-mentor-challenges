@@ -1,0 +1,65 @@
+@use '../../global' as g;
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    > .mobile-menu {
+        > .hidden {
+            display: none;
+        }
+        background: url('../../assets/menu-icon.svg') no-repeat center;
+        height: 30px;
+        width: 30px;
+        border: none;
+    }
+    .mobile-menu-open {
+        background: url('../../assets/close-icon.svg') no-repeat center;
+    }
+
+    > nav {
+        width: 90vw;
+        background-color: g.$dark-violet;
+        border-radius: 10px;
+        padding: 0 1.5rem;
+        z-index: 2;
+        position: absolute;
+        top: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+        > ul {
+            list-style: none;
+            &:first-child {
+                border-bottom: 1px solid g.$greyish-violet;
+                padding: 1.2rem 0 0.2rem 0;
+            }
+            &:last-child {
+                padding-bottom: 1.2rem;
+            }
+            > li {
+                margin: 1.5rem 0;
+                font-size: 1.1rem;
+                > .nav-link {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+                .sign-up {
+                    @include g.flex-center;
+                    background-color: g.$cyan;
+                    height: 3rem;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+    .mobile-nav-open {
+        max-height: 500px;
+        transition: max-height 0.35s ease-in;
+    }
+}

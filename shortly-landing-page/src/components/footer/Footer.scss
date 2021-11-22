@@ -1,0 +1,31 @@
+@use '../../global' as g;
+
+footer {
+    @include g.flex-center;
+    background-color: g.$very-dark-violet;
+    padding: 3rem 0;
+    color: white;
+    > .footer-logo {
+        margin-bottom: 2.5rem;
+    }
+    > .footer-links {
+        @include g.flex-center;
+        margin-bottom: 2rem;
+        > h4 {
+            margin-bottom: 0.7rem;
+        }
+        > .footer-link {
+            text-decoration: none;
+            color: g.$grey;
+            margin: 0.2rem 0;
+        }
+    }
+    > .social-links {
+        margin-top: 1rem;
+        @include g.flex-center;
+        flex-direction: row;
+        .social-link {
+            margin: 0 0.8rem;
+        }
+    }
+}

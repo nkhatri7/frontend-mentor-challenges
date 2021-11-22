@@ -1,38 +1,25 @@
+@use './global' as g;
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cta {
+  background-color: g.$cyan;
+  border: none;
+  border-radius: 50px;
   color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  height: 3.3rem;
+  width: 11.8rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h3 {
+  color: g.$very-dark-violet;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-scroll {
+  overflow-y: hidden;
 }
