@@ -23,3 +23,11 @@ h1, h2, h3 {
 .no-scroll {
   overflow-y: hidden;
 }
+
+@media screen and (min-width: 900px) {
+  .cta:hover {
+    cursor: pointer;
+    background-color: g.$cyan-hover;
+    transition: 0.5s;
+  }
+}

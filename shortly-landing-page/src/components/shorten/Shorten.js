@@ -77,8 +77,10 @@ function Shorten() {
     return (
         <div className="shorten">
             <form onSubmit={handleFormSubmit}>
-                <input type="url" name="user-url" id="user-url" placeholder="Shorten a link here..." onChange={handleInputChange} ref={urlInput} />
-                <p className="error-message" ref={errorMessage}></p>
+                <div className="url-container">
+                    <input type="url" name="user-url" id="user-url" placeholder="Shorten a link here..." onChange={handleInputChange} ref={urlInput} />
+                    <p className="error-message" ref={errorMessage}></p>
+                </div>
                 <input type="submit" value="Shorten It!" />
             </form>
             {linkElements}

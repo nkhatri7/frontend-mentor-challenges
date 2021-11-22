@@ -9,22 +9,14 @@
         align-items: flex-start;
         border-radius: 10px;
         padding: 1.5rem;
-        > input {
+        input {
             height: 2.9rem;
             width: 100%;
             border: none;
             border-radius: 5px;
             font-family: 'Poppins', sans-serif;
         }
-        > input[type=url] {
-            
-            font-size: 1rem;
-            
-            padding-left: 1rem;
-            &::placeholder {
-                color: g.$greyish-violet;
-            }
-        }
+        
         > input[type=submit] {
             background-color: g.$cyan;
             color: white;
@@ -32,17 +24,28 @@
             font-size: 1.1rem;
             margin-top: 1rem;
         }
-        .error-message {
-            color: g.$red;
-            font-size: 0.7rem;
-            font-style: italic;
-            margin-top: 0.2rem;
-        }
-        .input-error {
-            border: 3px solid g.$red;
-            &::placeholder {
-                color: g.$red !important;
-                opacity: 0.5;
+        .url-container {
+            width: 100%;
+            input[type=url] {
+                font-size: 1rem;
+                padding-left: 1rem;
+                &::placeholder {
+                    color: g.$greyish-violet;
+                }
+            }
+            .error-message {
+                color: g.$red;
+                font-size: 0.7rem;
+                font-style: italic;
+                text-align: left;
+                margin-top: 0.2rem;
+            }
+            .input-error {
+                border: 3px solid g.$red;
+                &::placeholder {
+                    color: g.$red !important;
+                    opacity: 0.5;
+                }
             }
         }
     }
@@ -97,6 +100,70 @@
         .cta-link-copied {
             background-color: g.$dark-violet;
             transition: 0.25s;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .shorten {
+        margin-top: -3rem;
+        form {
+            background: g.$dark-violet url('../../assets/bg-shorten-desktop.svg') no-repeat !important;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            max-width: 1400px !important;
+            input[type=submit] {
+                margin-top: 0 !important;
+                width: 12rem !important;
+                margin-left: 1rem;
+                &:hover {
+                    cursor: pointer;
+                    background-color: g.$cyan-hover;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        .link-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            .original-link {
+                padding: 0;
+            }
+            hr {
+                display: none;
+            }
+            .short-link-container {
+                padding: 0;
+                margin: 0 0.5rem 0 1.5rem;
+                > .delete-link {
+                    position: absolute;
+                    right: 1rem;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.8;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            .cta-link {
+                width: 11rem !important;
+                margin-right: 2rem !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .shorten {
+        margin-top: -4.5rem;
+        form {
+            padding: 3rem;
+            input[type=submit] {
+                margin-left: 1.5rem;
+            }
         }
     }
 }

@@ -22,3 +22,31 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .intro {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10vw;
+        text-align: left;
+        .intro-fig {
+            margin: 0 -9rem 0 0;
+            > img {
+                max-width: 45rem;
+            }
+        }
+        .intro-main {
+            h1 {
+                font-size: 4.5rem;
+                line-height: 5rem;
+            }
+            p {
+                font-size: 1.3rem;
+                padding: 1.2rem 0 2rem 0;
+                max-width: 32rem;
+            }
+        }
+    }
+}

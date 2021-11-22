@@ -14,11 +14,13 @@
     > .features-container {
         @include g.flex-center;
         margin-top: 6rem;
+        position: relative;
         > .feature {
             @include g.flex-center;
             background-color: white;
             border-radius: 5px;
             padding: 0 2rem 2.5rem 2rem;
+            z-index: 2;
             > .feature-icon {
                 @include g.flex-center;
                 background-color: g.$dark-violet;
@@ -36,6 +38,59 @@
             }
             &:not(:last-child) {
                 margin-bottom: 6rem;
+            }
+        }
+        // Lifted from https://stackoverflow.com/questions/1179928/how-can-i-put-a-vertical-line-down-the-center-of-a-div
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            border-left: 7px solid g.$cyan;
+            transform: translate(-50%);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .features {
+        padding: 0 10vw 7rem 10vw;
+        > h2 {
+            font-size: 2.5rem;
+        }
+        > p {
+            font-size: 1.2rem;
+            max-width: 34rem;
+        }
+        > .features-container {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 0;
+            > .feature {
+                width: calc(2rem + 23vw);
+                max-width: 25rem;
+                align-items: flex-start;
+                text-align: left;
+                &:nth-child(2) {
+                    margin-top: 6rem;
+                }
+                &:last-child {
+                    margin-top: 12rem;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+            }
+            &::after {
+                top: 15rem;
+                left: 0;
+                right: 0;
+                bottom: auto;
+                transform: translateX(0);
+                border-left: none;
+                border-bottom: 8px solid g.$cyan;
             }
         }
     }
