@@ -2,7 +2,7 @@
   {
     "id": 1,
     "company": "Photosnap",
-    "logo": "https://github.com/nkhatri7/Frontend-Mentor-Challenges/blob/main/job-listings/src/assets/photosnap.svg",
+    "logo": "https://raw.githubusercontent.com/nkhatri7/Frontend-Mentor-Challenges/main/job-listings/src/assets/photosnap.svg",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
