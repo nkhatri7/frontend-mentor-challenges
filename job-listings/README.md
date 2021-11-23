@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/job-listings-with-filtering-built-with-react-and-scss-hzBMyeE1a)
+- [Live Site](https://nkhatri7.github.io/job-listings/)
 
 ## My process
 
