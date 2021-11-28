@@ -61,7 +61,11 @@ const TodoList = ({darkMode}) => {
     }
 
     const handleClearCompleted = () => {
-        setTasks(tasks.filter(task => task.completed === false));
+        const filteredTasks = tasks.filter(task => task.completed === false);
+        if (filteredTasks.length === 0) {
+            localStorage.removeItem('tasks');
+        }
+        setTasks(filteredTasks);
     }
 
     const filteredTasks = () => {
@@ -145,7 +149,7 @@ const TodoList = ({darkMode}) => {
                     <Filter darkMode={darkMode} handleFilter={handleFilter} />
                 </div>
             }
-            <p className="dnd-text">Drag and drop to reorder list</p>
+            {tasks.length === 0 ? null : <p className="dnd-text">Drag and drop to reorder list</p>}
         </div>
     );
 }

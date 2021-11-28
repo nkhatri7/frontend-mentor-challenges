@@ -1,8 +1,9 @@
 @use '../../global' as g;
 
 header {
-    background: url('../../assets/bg-mobile-dark.jpg') no-repeat center;    
+    background: url('../../assets/bg-mobile-dark.jpg') no-repeat;    
     height: 200px;
+    background-size: cover;
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -32,7 +33,8 @@ header {
 
 /* LIGHT MODE */
 .header-light {
-    background: url('../../assets/bg-mobile-light.jpg') no-repeat center;
+    background: url('../../assets/bg-mobile-light.jpg') no-repeat;
+    background-size: cover;
     .theme-toggle-light {
         height: 20px;
         width: 20px;
@@ -48,9 +50,11 @@ header {
 @media screen and (min-width: 376px) {
     header {
         background: url('../../assets/bg-desktop-dark.jpg') no-repeat;
+        background-size: cover;
     }
     .header-light {
         background: url('../../assets/bg-desktop-light.jpg') no-repeat;
+        background-size: cover;
     }
 }
 
