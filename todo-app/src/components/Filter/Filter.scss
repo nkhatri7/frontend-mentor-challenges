@@ -1,0 +1,38 @@
+@use '../../global' as g;
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .filter {
+        background-color: transparent;
+        border: none;
+        color: g.$dark-theme-dark-greyish-blue;
+        font-weight: 700;
+        margin: 0 0.5rem;
+    }
+    > .active {
+        color: g.$bright-blue;
+    }
+}
+
+.filter-container-light {
+    > .filter {
+        color: g.$light-theme-dark-greyish-blue;
+    }
+    > .active {
+        color: g.$bright-blue;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .filter-container > .filter:not(.active):hover {
+        cursor: pointer;
+        color: g.$dark-theme-light-greyish-blue;
+        transition: color 0.5s;
+    }
+    .filter-container-light > .filter:not(.active):hover {
+        color: g.$light-theme-very-dark-greyish-blue;
+        transition: color 0.5s;
+    }
+}

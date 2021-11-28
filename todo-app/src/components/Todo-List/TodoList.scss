@@ -1,0 +1,142 @@
+@use '../../global' as g;
+
+.todo-list {
+    position: absolute;
+    margin-top: -6rem;
+    width: 100%;
+    > .new-item {
+        background-color: g.$very-dark-desaturated-blue;
+        width: 100%;
+        height: 3rem;
+        padding: 0 1rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem;
+        > .circle {
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            border: 1px solid g.$dark-theme-very-dark-greyish-blue-2;
+            margin-right: 1rem;
+        }
+        > input {
+            background-color: transparent;
+            border: none;
+            color: g.$dark-theme-light-greyish-blue;
+            width: calc(100% - 2.2rem);
+            &:focus {
+                outline: none !important;
+            }
+        }
+    }
+    > .tasks-container {
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        > .tasks-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: g.$very-dark-desaturated-blue;
+            height: 3rem;
+            padding: 0 1rem;
+            > .items-left, .clear {
+                color: g.$dark-theme-dark-greyish-blue;
+                font-size: 0.75rem;
+            }
+            .filter-non-mobile-container {
+                display: none;
+            }
+            > .clear {
+                background: none;
+                border: none;
+            }
+        }
+    }
+    > .filter-mobile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: g.$very-dark-desaturated-blue;
+        border-radius: 5px;
+        height: 3rem;
+        margin-top: 1rem;
+    }
+    > .dnd-text {
+        text-align: center;
+        color: g.$dark-theme-dark-greyish-blue;
+        font-size: 0.8rem;
+        padding: 1.5rem 0 1rem 0;
+    }
+}
+
+/* LIGHT MODE */
+.todo-list-light {
+    > .new-item {
+        background-color: g.$very-light-grey !important;
+        > .circle {
+            border: 1px solid g.$light-theme-light-greyish-blue !important;
+        }
+        > input {
+            color: g.$light-theme-very-dark-greyish-blue !important;
+            &::placeholder {
+                color: g.$light-theme-dark-greyish-blue;
+            }
+        }
+    }
+    .tasks-footer {
+        background-color: g.$very-light-grey !important;
+        > .items-left, .clear {
+            color: g.$light-theme-dark-greyish-blue !important;
+        }
+    }
+    .filter-mobile-container {
+        background-color: g.$very-light-grey !important;
+    }
+    > .dnd-text {
+        color: g.$light-theme-dark-greyish-blue !important;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .filter-mobile-container {
+        display: none !important;
+    }
+    .filter-non-mobile-container {
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .todo-list {
+        margin-top: -8.5rem !important;
+        > .new-item {
+            height: 4rem;
+            margin-bottom: 1.5rem;
+            > .circle {
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+            > input {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .todo-list .clear:hover {
+        cursor: pointer;
+        color: g.$dark-theme-light-greyish-blue !important;
+        transition: color 0.5s;
+    }
+
+    .todo-list-light .clear:hover {
+        color: g.$light-theme-very-dark-greyish-blue !important;
+        transition: color 0.5s;
+    }
+}

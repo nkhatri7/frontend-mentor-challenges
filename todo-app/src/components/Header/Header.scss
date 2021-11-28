@@ -1,0 +1,81 @@
+@use '../../global' as g;
+
+header {
+    background: url('../../assets/bg-mobile-dark.jpg') no-repeat center;    
+    height: 200px;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-top: 3rem;
+        max-width: 85vw;
+        left: 50%;
+        transform: translateX(-50%);
+        > h1 {
+            color: white;
+            font-size: 1.7rem;
+            letter-spacing: 0.6rem;
+        }
+        > .theme-toggle {
+            height: 20px;
+            width: 20px;
+            border: none;
+            background: url('../../assets/icon-sun.svg') no-repeat center;
+            background-size: 20px;
+            > .hidden {
+                display: none;
+            }
+        }
+    }
+}
+
+/* LIGHT MODE */
+.header-light {
+    background: url('../../assets/bg-mobile-light.jpg') no-repeat center;
+    .theme-toggle-light {
+        height: 20px;
+        width: 20px;
+        border: none;
+        background: url('../../assets/icon-moon.svg') no-repeat center;
+        background-size: 20px;
+        > .hidden {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 376px) {
+    header {
+        background: url('../../assets/bg-desktop-dark.jpg') no-repeat;
+    }
+    .header-light {
+        background: url('../../assets/bg-desktop-light.jpg') no-repeat;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        height: 300px;
+        .wrapper {
+            max-width: 550px !important;
+            padding-top: 5rem !important;
+            position: relative;
+            > h1 {
+                font-size: 2.5rem;
+                letter-spacing: 0.9rem;
+            }
+            > .theme-toggle {
+                height: 26px;
+                width: 26px;
+                background-size: 26px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .theme-toggle:hover, .theme-toggle-light:hover {
+        cursor: pointer;
+    }
+}
