@@ -1,0 +1,34 @@
+.mobile-images {
+    position: relative;
+    > .product-img {
+        width: 100vw;
+        height: 80vw;
+        object-fit: cover;
+    }
+    > .img-nav-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > .img-nav {
+            border: none;
+            height: 2.2rem;
+            width: 2.2rem;
+            border-radius: 50%;
+        }
+        > .previous {
+            background: url('../../assets/images/icon-previous.svg') no-repeat, white;
+            background-size: 0.6rem;
+            background-position: 45% 50%;
+        }
+        > .next {
+            background: url('../../assets/images/icon-next.svg') no-repeat, white;
+            background-size: 0.6rem;
+            background-position: 52% 52%;
+        }
+    }
+}

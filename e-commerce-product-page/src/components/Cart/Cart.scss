@@ -1,0 +1,90 @@
+@use '../../global' as g;
+
+.cart {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    width: 95vw;
+    left: 50%;
+    margin-top: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -350px);
+    transition: transform 0.5s;
+    > .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        padding: 1.4rem;
+        border-bottom: 1px solid g.$greyish-blue;
+        > .close-cart {
+            border: none;
+            background: url('../../assets/images/icon-close.svg') no-repeat center;
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+    > .no-items {
+        text-align: center;
+        color: g.$dark-greyish-blue;
+        font-weight: 700;
+        padding: 5.2rem 0;
+    }
+    > .order-detail-container {
+        @include g.flex-center;
+        flex-direction: column;
+        padding: 1.7rem 1.2rem 1.9rem 1.2rem;
+        > .order-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            > img {
+                max-width: 3rem;
+                border-radius: 5px;
+            }
+            > .product-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                color: g.$dark-greyish-blue;
+                margin-left: -1.5rem;
+                > .product-name {
+                    max-width: 12rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 0.3rem;
+                }
+                .total-product-price {
+                    color: g.$very-dark-blue;
+                    font-weight: 700;
+                    margin-left: 0.5rem;
+                }
+            }
+            > .remove-item {
+                border: none;
+                background: url('../../assets/images/icon-delete.svg') no-repeat center;
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+        > .checkout {
+            border: none;
+            background-color: g.$orange;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 100%;
+            padding: 1.2rem 0;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.cart-active {
+    transform: translate(-50%, 0);
+}
