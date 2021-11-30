@@ -1,0 +1,157 @@
+@use '../../global' as g;
+
+main {
+    width: 100vw;
+    > .detail-main-wrapper {
+        width: 85%;
+        margin: 2.5rem auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        > .back {
+            width: 6rem;
+            padding: 0.4rem 0 0.4rem 1.2rem;
+            border: none;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        > .detail-content {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            > img {
+                width: 85vw;
+                height: 55vw;
+                object-fit: cover;
+                max-width: 510px;
+                max-height: 300px;
+            }
+            > .text-content {
+                margin-top: 2.5rem;
+                > .main-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    > {
+                        .detail-column {
+                            margin: 1rem 0;
+                            > p {
+                                margin: 0.55rem 0;
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+                .detail-heading {
+                    font-weight: 600;
+                }
+                > .border-countries-container {
+                    margin-bottom: 2rem;
+                    > .border-countries {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 0.5rem 0 0 -0.2rem;
+                        > .border {
+                            font-size: 0.9rem;
+                            min-width: 6rem;
+                            padding: 0.05rem 0.5rem;
+                            margin: 0.5rem 0.2rem;
+                            border: none;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.back-dark {
+    background: url('../../assets/back-arrow-dark-mode.svg') no-repeat, g.$dark-mode-elements;
+    background-position: 20% 45%;
+    background-size: 1rem;
+    box-shadow: 0 1px 5px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.back-light {
+    background: url('../../assets/back-arrow-light-mode.svg') no-repeat, white;
+    background-position: 20% 45%;
+    background-size: 1rem;
+    box-shadow: 0 1px 5px 2px rgb(218, 218, 218);
+    color: g.$light-mode-text;
+}
+
+.detail-dark {
+    color: white;
+    .border {
+        background-color: g.$dark-mode-elements;
+        color: white;
+        box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.detail-light {
+    color: g.$light-mode-text;
+    .border {
+        background-color: white;
+        color: g.$light-mode-text;
+        box-shadow: 0 1px 5px 2px rgb(218, 218, 218);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .detail-main-wrapper {
+        width: 100%;
+        max-width: 1300px;
+        > .back:hover {
+            cursor: pointer;
+        }
+        .detail-content {
+            width: 100%;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            > .text-content {
+                width: 33rem;
+                > h2 {
+                    font-size: 2rem;
+                }
+                > .main-details {
+                    flex-direction: row !important;
+                    justify-content: flex-start !important;
+                    > .detail-column:last-child {
+                        margin-left: 4rem;
+                    }
+                }
+                .border {
+                    padding: 0.15rem 0.5rem !important;
+                    margin: 0.5rem 0.4rem !important;
+                    &:hover {
+                        cursor: pointer;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    .detail-dark .border:hover {
+        box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.2) !important;
+    }
+    .detail-light .border:hover {
+        box-shadow: 0 1px 5px 3px rgb(197, 197, 197);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .detail-column:last-child {
+        margin-left: 8rem;
+    }
+}

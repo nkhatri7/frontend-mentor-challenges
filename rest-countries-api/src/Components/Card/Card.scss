@@ -1,0 +1,56 @@
+@use '../../global' as g;
+
+.country-card {
+    margin: 1.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    width: max-content;
+    height: 21rem;
+    > img {
+        width: 17rem;
+        height: 10rem;
+        object-fit: cover;
+    }
+    > .card-text-content {
+        padding: 1rem 0 0 1.5rem;
+        > h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+            max-width: 15rem;
+        }
+        > P {
+            font-size: 0.9rem;
+            margin: 0.15rem;
+            > .detail-name {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.card-dark {
+    background-color: g.$dark-mode-elements;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+    color: white;
+}
+
+.card-light {
+    background-color: white;
+    box-shadow: 0 3px 5px rgb(243, 243, 243);
+    color: g.$light-mode-text;
+}
+
+@media screen and (min-width: 1200px) {
+    .country-card:hover {
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    .card-dark:hover {
+        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-light:hover {
+        box-shadow: 0 5px 5px 5px rgb(218, 218, 218);
+    }
+}

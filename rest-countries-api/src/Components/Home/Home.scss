@@ -1,0 +1,135 @@
+@use '../../global' as g;
+
+/* SEARCH AND FILTER */
+.search-filter-container {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5vw;
+    .search {
+        width: 21rem;
+        padding: 0.8rem 4rem;
+        border-radius: 5px;
+        border: none;
+    }
+    .filter-container {
+        position: absolute;
+        margin-top: 4.5rem;
+        z-index: 2;
+        > .filter {
+            width: 12rem;
+            padding: 0.8rem 0 0.8rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+        }
+        > .region-options {
+            list-style: none;
+            width: 12rem;
+            padding: 0.5rem 0 0.5rem 1.2rem;
+            border-radius: 5px;
+            margin-top: 0.2rem;
+            z-index: 2;
+            display: none;
+            > .region-option {
+                margin: 0.5rem 0;
+                font-size: 0.8rem;
+            }
+        }
+        .filter-open {
+            display: block;
+        }
+    }
+}
+
+.search-filter-dark {
+    .search {
+        background: url('../../assets/search-dark-mode.svg') no-repeat, g.$dark-mode-elements;
+        background-position: 8% 45%;
+        background-size: 1rem;
+        color: white;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        &::placeholder {
+            color: white;
+        }
+    }
+    .filter {
+        background: url('../../assets/arrow-dark-mode.svg') no-repeat, g.$dark-mode-elements;
+        background-position: 90% 50%;
+        background-size: 0.8rem;
+        color: white;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+    .region-options {
+        background-color: g.$dark-mode-elements;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        color: white;
+    }
+}
+
+.search-filter-light {
+    .search {
+        background: url('../../assets/search-light-mode.svg') no-repeat, white;
+        background-position: 8% 45%;
+        background-size: 1rem;
+        color: g.$light-mode-text;
+        box-shadow: 0 1px 5px rgb(243, 243, 243);
+    }
+    .filter {
+        background: url('../../assets/arrow-light-mode.svg') no-repeat, white;
+        background-position: 90% 50%;
+        background-size: 0.8rem;
+        color: g.$light-mode-text;
+        box-shadow: 0 1px 5px rgb(243, 243, 243);
+    }
+    .region-options {
+        background-color: white;
+        box-shadow: 0 1px 5px rgb(243, 243, 243);
+        color: g.$light-mode-text;
+    }
+}
+
+/* COUNTRIES CONTAINER */
+.countries-container {
+    margin: 5.5rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 90vw;
+    max-width: 1440px;
+}
+
+@media screen and (min-width: 1000px) {
+    .search-filter-container {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        margin-top: 3rem;
+        > .filter-container {
+            position: absolute;
+            margin-top: 0;
+            right: 0;
+        }
+    }
+    .countries-container {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .filter:hover, .region-option:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .search-filter-container {
+        max-width: 1235px;
+        padding: 0;
+    }
+}
