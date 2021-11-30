@@ -1,0 +1,37 @@
+@use '../../global' as g;
+
+.desktop-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > .main-img {
+        max-width: 28rem;
+        border-radius: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    > .images-preview-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        width: 100%;
+        > .preview {
+            max-width: 5.5rem;
+            border-radius: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+            &:not(.active-preview):hover {
+                opacity: 0.5;
+                transition: opacity 0.5s;
+            }
+        }
+        > .active-preview {
+            border: 2px solid g.$orange;
+            opacity: 0.7;
+        }
+    }
+}

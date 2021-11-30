@@ -71,7 +71,6 @@ header {
         @include g.flex-center;
         > .cart-icon-container {
             position: relative;
-            margin-right: 1rem;
             > .cart-icon {
                 background: none;
                 border: none;
@@ -95,9 +94,75 @@ header {
             background: none;
             border: none;
             border-radius: 50%;
+            margin-left: 1rem;
             > .avatar {
                 max-width: 1.7rem;
+                border-radius: 50%;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+    nav {
+        position: relative !important;
+        transform: translateX(0) !important;
+        transition: none !important;
+        background: none !important;
+        margin-left: 1rem;
+        > ul {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            padding: 0 !important;
+            > li {
+                margin: 0 0.7rem !important;
+                > .nav-link {
+                    color: g.$dark-greyish-blue !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 2rem 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1100px;
+        border-bottom: 1px solid g.$greyish-blue;
+        nav {
+            margin-left: 2rem !important;
+        }
+        .nav-link {
+            font-size: 0.9rem !important;
+            padding: 2.75rem 0;
+            &:hover {
+                color: g.$very-dark-blue !important;
+                border-bottom: 3px solid g.$orange;
+            }
+        }
+        .profile {
+            margin-left: 2.5rem !important;
+            > .avatar {
+                max-width: 3rem !important;
+            }
+        }
+        .cart-icon:hover, .profile:hover {
+            cursor: pointer;
+        }
+        .cart-icon:hover > svg > path {
+            fill: g.$very-dark-blue;
+        }
+        .profile:hover .avatar {
+            border: 2px solid g.$orange;
         }
     }
 }

@@ -88,3 +88,37 @@
 .cart-active {
     transform: translate(-50%, 0);
 }
+
+@media screen and (min-width: 1200px) {
+    .cart {
+        left: auto !important;
+        right: 0 !important;
+        top: 5.5rem;
+        transform: translateX(0);
+        max-width: 20.5rem;
+        opacity: 0;
+        transition: opacity 0.5s;
+        .product-details {
+            margin-left: 0 !important;
+        }
+        .remove-item:hover, .close-cart:hover {
+            cursor: pointer;
+        }
+        .checkout {
+            padding: 1rem 0 !important;
+            transition: background-color 0.5s;
+            &:hover {
+                cursor: pointer;
+                background-color: g.$orange-hover;
+            }
+        }
+        > .no-items {
+            padding: 4.8rem 0 !important;
+        }
+    }
+
+    .cart-active {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}

@@ -6,3 +6,39 @@
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
 }
+
+.desktop-images-container {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-images-container {
+    display: none;
+  }
+
+  .main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1050px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 11rem;
+    padding-bottom: 2rem;
+  }
+
+  .desktop-images-container {
+    display: block !important;
+  }
+
+  .cart-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+  }
+}
