@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-rest-countries-api-built-with-react-router-and-scss-go7w8JV58)
+- [Live Site](https://nkhatri7.github.io/rest-countries-api)
 
 ## My process
 
