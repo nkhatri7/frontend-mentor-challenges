@@ -1,0 +1,21 @@
+@use '../../global' as g;
+
+.score {
+    background-color: g.$light-grey;
+    @include g.flex-column-center();
+    border-radius: 10px;
+    min-width: 2.2rem;
+    padding: 0.7rem 0;
+    > .graphic-btn {
+        background-color: transparent;
+        border: none;
+        &:hover > svg > path {
+            fill: #5457b6;
+            transition: fill 0.5s;
+        }
+    }
+    > .score-number {
+        padding: 0.8rem 0;
+        color: g.$moderate-blue;
+    }
+}

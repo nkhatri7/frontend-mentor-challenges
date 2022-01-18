@@ -1,0 +1,90 @@
+@use '../../global' as g;
+
+.comment {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0.6rem 0;
+    padding: 1.5rem 1rem;
+    border-radius: 7px;
+    .comment-main-section {
+        @include g.flex-column();
+        margin-left: 1rem;
+        > .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 0.7rem;
+            .current-user-comment-identifier {
+                padding: 0.1rem 0.5rem;
+                background-color: g.$moderate-blue;
+                color: white;
+                font-weight: 500;
+                font-size: 0.8rem;
+                border-radius: 2px;
+                margin: 0 0.7rem 0 -0.5rem;
+            }
+            .graphic-btn {
+                background-color: transparent;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    opacity: 0.5;
+                    transition: opacity 0.5s;
+                }
+                > .btn-text {
+                    margin-left: 0.3rem;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                }
+                > .purple-btn-text {
+                    color: g.$moderate-blue;
+                }
+                > .red-btn-text {
+                    color: g.$soft-red;
+                }
+            }
+            .action-btns-container {
+                @include g.flex-start();
+                > .graphic-btn:last-child {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+        .flex-start {
+            @include g.flex-start();
+        }
+        .profile-pic {
+            max-width: 2rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .username {
+            font-weight: 500;
+            padding: 0 1rem;
+            color: g.$dark-blue;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .body-text {
+            color: g.$greyish-blue;
+        }
+        .comment-content {
+            line-height: 1.5rem;
+        }
+        .reply-mention {
+            font-weight: 500;
+            color: g.$moderate-blue;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
