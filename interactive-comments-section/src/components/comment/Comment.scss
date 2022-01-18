@@ -12,6 +12,7 @@
     .comment-main-section {
         @include g.flex-column();
         margin-left: 1rem;
+        width: 100%;
         > .comment-header {
             display: flex;
             justify-content: space-between;
@@ -85,6 +86,19 @@
             &:hover {
                 cursor: pointer;
             }
+        }
+        .editing-mode {
+            width: 100%;
+            @include g.flex-column();
+            align-items: flex-end;
+            textarea {
+                margin: 0 0 1rem 0;
+                font-weight: 400;
+                color: g.$dark-blue;
+            }
+        }
+        .content-container {
+            width: 100%;
         }
     }
 }

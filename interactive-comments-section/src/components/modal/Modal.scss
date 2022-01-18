@@ -1,0 +1,53 @@
+@use '../../global' as g;
+
+.overlay {
+    position: fixed;
+    inset: 0 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    > .modal-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 350px;
+        > .modal-heading {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: g.$dark-blue;
+        }
+        > .modal-body {
+            color: g.$greyish-blue;
+            line-height: 1.5rem;
+            margin: 1rem 0;
+        }
+        > .modal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            > .modal-action {
+                border: none;
+                border-radius: 5px;
+                font-weight: 500;
+                color: white;
+                height: 2.5rem;
+                min-width: 8.5rem;
+                &:hover {
+                    opacity: 0.5;
+                    transition: opacity 0.5s;
+                }
+            }
+            > .cancel {
+                background-color: g.$greyish-blue;
+            }
+            > .delete {
+                background-color: g.$soft-red;
+            }
+        }
+    }
+}
