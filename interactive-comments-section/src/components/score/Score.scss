@@ -9,6 +9,9 @@
     > .graphic-btn {
         background-color: transparent;
         border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover > svg > path {
             fill: #5457b6;
             transition: fill 0.5s;
@@ -17,5 +20,17 @@
     > .score-number {
         padding: 0.8rem 0;
         color: g.$moderate-blue;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .score {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem;
+        width: 5rem;
+        .score-number {
+            padding: 0;
+        }
     }
 }

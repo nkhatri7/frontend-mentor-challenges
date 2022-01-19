@@ -1,0 +1,34 @@
+@use '../../global' as g;
+
+.new-reply {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0.6rem;
+    padding: 1.5rem 1rem;
+    border-radius: 7px;
+    > .profile-pic {
+        max-width: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .new-reply {
+        @include g.flex-column-center();
+        > .profile-pic, > .comment-btn {
+            display: none;
+        }
+        > .mobile-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            > .profile-pic {
+                max-width: 2rem;
+            }
+        }
+    }
+}

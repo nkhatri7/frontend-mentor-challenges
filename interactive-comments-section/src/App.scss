@@ -18,14 +18,14 @@ main {
     > .comments-container {
         @include g.flex-column-center();
         max-width: 700px;
-    }
-    .thread-container {
-        width: 100%;
-    }
-    .replies-container {
-        margin: 0.6rem 0 0.6rem 2rem;
-        border-left: 2px solid g.$light-grey;
-        padding-left: 2rem;
+        .thread-container {
+            width: 100%;
+        }
+        .replies-container {
+            margin: 0.6rem 0 0.6rem 2rem;
+            border-left: 2px solid g.$light-grey;
+            padding-left: 2rem;
+        }
     }
     .new-comment-container {
         max-width: 700px;
@@ -39,6 +39,9 @@ main {
         border-radius: 7px;
         > img {
             max-width: 2rem;
+        }
+        .mobile-container {
+            display: none;
         }
     }
 }
@@ -79,4 +82,52 @@ textarea {
 
 button:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+    .comment-btn:hover {
+        opacity: 1 !important;
+    }
+    textarea:hover {
+        border: 1px solid g.$light-grey;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .comments-container {
+        max-width: none !important;
+        width: 90vw !important;
+        .replies-container {
+            margin: 0.6rem 0 !important;
+        }
+    }
+    .new-comment-container {
+        max-width: none !important;
+        width: 90vw !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .replies-container {
+        padding-left: 1rem !important;
+    }
+    .new-comment-container {
+        @include g.flex-column-center();
+        > img, > .comment-btn {
+            display: none;
+        }
+        > textarea {
+            margin: 0;
+        }
+        .mobile-container {
+            width: 100%;
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            > img {
+                max-width: 2rem;
+            }
+        }
+    }
 }
