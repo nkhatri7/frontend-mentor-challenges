@@ -12,6 +12,9 @@
     > .profile-pic {
         max-width: 2rem;
     }
+    > .mobile-container {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {

@@ -96,19 +96,31 @@ const Comment = ({
                     <div className="mobile-action-btns-container">
                         {currentUser.username === username ? 
                             <div className="action-btns-container">
-                                <button className="graphic-btn" onClick={() => setModalDisplay(true)}>
-                                    <DeleteIcon />
-                                    <div className="btn-text red-btn-text">Delete</div>
+                                <button 
+                                    className="graphic-btn red-btn-text" 
+                                    aria-label='Delete' 
+                                    onClick={() => setModalDisplay(true)}
+                                >
+                                    <DeleteIcon className="comment-icon" />
+                                    Delete
                                 </button>
-                                <button className="graphic-btn" onClick={() => setEditingMode(true)}>
-                                    <EditIcon />
-                                    <div className="btn-text purple-btn-text">Edit</div>
+                                <button 
+                                    className="graphic-btn purple-btn-text" 
+                                    aria-label='Edit' 
+                                    onClick={() => setEditingMode(true)}
+                                >
+                                    <EditIcon className="comment-icon" />
+                                    Edit
                                 </button>
                             </div>
                             :
-                            <button className="graphic-btn" onClick={() => setNewReplyDisplay(true)}>
-                                <ReplyIcon />
-                                <div className="btn-text purple-btn-text">Reply</div>
+                            <button 
+                                className="graphic-btn purple-btn-text" 
+                                aria-label='Reply' 
+                                onClick={() => setNewReplyDisplay(true)}
+                            >
+                                <ReplyIcon className="comment-icon" />
+                                Reply
                             </button>
                         }
                     </div>
@@ -126,19 +138,31 @@ const Comment = ({
                         </div>
                         {currentUser.username === username ? 
                             <div className="action-btns-container">
-                                <button className="graphic-btn" onClick={() => setModalDisplay(true)}>
-                                    <DeleteIcon />
-                                    <div className="btn-text red-btn-text">Delete</div>
+                                <button 
+                                    className="graphic-btn red-btn-text" 
+                                    aria-label='Delete' 
+                                    onClick={() => setModalDisplay(true)}
+                                >
+                                    <DeleteIcon className="comment-icon" />
+                                    Delete
                                 </button>
-                                <button className="graphic-btn" onClick={() => setEditingMode(true)}>
-                                    <EditIcon />
-                                    <div className="btn-text purple-btn-text">Edit</div>
+                                <button 
+                                    className="graphic-btn purple-btn-text" 
+                                    aria-label='Edit' 
+                                    onClick={() => setEditingMode(true)}
+                                >
+                                    <EditIcon className="comment-icon" />
+                                    Edit
                                 </button>
                             </div>
                             :
-                            <button className="graphic-btn" onClick={() => setNewReplyDisplay(true)}>
-                                <ReplyIcon />
-                                <div className="btn-text purple-btn-text">Reply</div>
+                            <button 
+                                className="graphic-btn purple-btn-text" 
+                                aria-label='Reply' 
+                                onClick={() => setNewReplyDisplay(true)}
+                            >
+                                <ReplyIcon className="comment-icon" />
+                                Reply
                             </button>
                         }
                     </div>
