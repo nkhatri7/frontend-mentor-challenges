@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub/mobile-first-nft-preview-card-MmHrlkHeR)
-- [Live Site](https://nkhatri7.github.io/NFT-Preview-Card/)
+- [Live Site](https://nft-preview-card-nkhatri7.netlify.app/)
 
 ## My process
 

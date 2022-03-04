@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-landing-page-using-calc-vw-units-iFp-Wo5oF)
-- Live Site URL: [Live Site](https://huddle-landing-page-opal-eight.vercel.app/)
+- Live Site URL: [Live Site](https://huddle-landing-page-nkhatri7.netlify.app/)
 
 ## My process
 

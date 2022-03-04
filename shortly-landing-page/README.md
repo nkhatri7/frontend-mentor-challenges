@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-shortly-landing-page-built-with-react-and-scss-91sUCg0xP)
-- [Live Site](https://nkhatri7.github.io/shortly-landing-page/)
+- [Live Site](https://shortly-landing-page-nkhatri7.netlify.app/)
 
 ## My process
 

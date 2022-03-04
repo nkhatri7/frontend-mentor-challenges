@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/responsive-countdown-timer-built-with-vanilla-js-and-css-UgQqVbnTA)
-- [Live Site URL](https://nkhatri7.github.io/Launch-Countdown-Timer/)
+- [Live Site URL](https://launch-countdown-timer-nkhatri7.netlify.app/)
 
 ## My process
 

@@ -33,7 +33,7 @@ Completed mobile screenshot is available in the design folder.
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/interactive-comments-section-built-with-react-and-scss-7pSVKVEny)
-- [Live Site](https://nkhatri7.github.io/interactive-comments-section/)
+- [Live Site](https://interactive-comments-section-nkhatri7.netlify.app/)
 
 ## Built with
 

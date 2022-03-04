@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6/hub/mobile-first-ecommerce-product-page-built-with-react-and-scss-cwtLGJrj1)
-- [Live Site](https://nkhatri7.github.io/e-commerce-product-page/)
+- [Live Site](https://e-commerce-product-page-nkhatri7.netlify.app/)
 
 ## My process
 

@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/easybank-landing-page-using-react-scss-and-mobilefirst-workflow--AIOhxE7Z)
-- [Live Site URL](https://nkhatri7.github.io/easybank-landing-page/)
+- [Live Site URL](https://easybank-landing-page-nkhatri7.netlify.app/)
 
 ## My process
 

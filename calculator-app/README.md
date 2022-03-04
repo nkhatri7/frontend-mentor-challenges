@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/calculator-app-built-with-react-EeBw-xQJn)
-- [Live Site URL](https://nkhatri7.github.io/react-calculator-app/)
+- [Live Site URL](https://calculator-app-nkhatri7.netlify.app/)
 
 ## My process
 

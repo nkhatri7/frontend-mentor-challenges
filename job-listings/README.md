@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/job-listings-with-filtering-built-with-react-and-scss-hzBMyeE1a)
-- [Live Site](https://nkhatri7.github.io/job-listings/)
+- [Live Site](https://job-listings-nkhatri7.netlify.app/)
 
 ## My process
 

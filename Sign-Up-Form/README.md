@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-signup-form-using-calc-gvIOGzFCV)
-- Live Site URL: [Live Site](https://signup-form-brown.vercel.app/)
+- Live Site URL: [Live Site](https://sign-up-form-nkhatri7.netlify.app/)
 
 ## My process
 

@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-todo-app-built-with-react-beautiful-dnd-and-scss-Xdh0JtK8r)
-- [Live Site](https://nkhatri7.github.io/todo-app/)
+- [Live Site](https://todo-app-nkhatri7.netlify.app/)
 
 ## My process
 

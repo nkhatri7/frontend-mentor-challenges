@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-rest-countries-api-built-with-react-router-and-scss-go7w8JV58)
-- [Live Site](https://nkhatri7.github.io/rest-countries-api)
+- [Live Site](https://rest-countries-api-nkhatri7.netlify.app/)
 
 ## My process
 

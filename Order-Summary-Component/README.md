@@ -28,7 +28,7 @@ Users should be able to see hover states for interactive elements.
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/responsive-solution-using-css-flexbox-Jl0Bmom7M)
-- [Live Site URL](https://order-summary-component-nkhatri7.vercel.app/)
+- [Live Site URL](https://order-summary-component-nkhatri7.netlify.app/)
 
 ## My process
 
