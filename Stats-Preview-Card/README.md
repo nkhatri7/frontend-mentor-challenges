@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-stats-preview-card-ncuMh2g9M)
-- Live Site URL: live site URL has been removed because there are only a limited number of deployments I can make from the same repository. Sorry for the inconvenience 😅
+- Live Site URL: [Live Site](https://stats-preview-card-ten.vercel.app/)
 
 ## My process
 
