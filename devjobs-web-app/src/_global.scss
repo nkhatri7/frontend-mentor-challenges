@@ -1,0 +1,41 @@
+/* COLOURS */
+$background: #F4F6F8;
+$darkModeBackground: #121721;
+$purple: #5964DF;
+$lightPurple: #939BF4;
+$darkModeCard: #1A202C;
+$primaryText: #19202D;
+$secondaryText: #6E8098;
+$darkModePrimaryText: #FFFFFF;
+
+/* MIXINS */
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justify-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex-column-centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+@use '../../global' as g;
+
+.not-found {
+    height: calc(100vh - 136px);
+    width: 100%;
+    @include g.flex-column-centre();
+    justify-content: center;
+    text-align: center;
+    > h1 {
+        color: g.$purple;
+    }
+    > p {
+        max-width: 90%;
+        margin-top: 1rem;
+        &.body-text-dark {
+            color: white;
+        }
+    }
+}

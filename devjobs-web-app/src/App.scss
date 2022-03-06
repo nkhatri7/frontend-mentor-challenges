@@ -1,1 +1,28 @@
+@use './global' as g;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+.App {
+    min-height: 100vh;
+    background-color: g.$background;
+    transition: all 0.3s ease;
+    &.App-dark {
+        background-color: g.$darkModeBackground;
+    }
+    > main {
+        position: relative;
+    }
+}

@@ -1,0 +1,160 @@
+@use '../../global' as g;
+
+.job-detailed {
+    min-height: 100vh;
+    background-color: g.$background;
+    transition: all 0.3s ease;
+    &.job-detailed-dark {
+        background-color: g.$darkModeBackground;
+    }
+    .apply-now {
+        border-radius: 5px;
+        background-color: g.$purple;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-decoration: none;
+        height: 3rem;
+        @include g.flex-centre();
+    }
+    .card-dark {
+        background-color: g.$darkModeCard !important;
+    }
+    > .container {
+        max-width: 87%;
+        margin: 0 auto;
+        position: relative;
+        h1 {
+            font-size: 1.3rem;
+        }
+        h2, h3 {
+            font-size: 1.2rem;
+            color: g.$primaryText;
+        }
+        .heading-dark {
+            color: g.$darkModePrimaryText !important;
+        }
+        .secondary-text {
+            color: g.$secondaryText;
+        }
+        > .company-banner {
+            width: 100%;
+            background-color: #FFFFFF;
+            padding: 3rem 2rem 2rem 2rem;
+            border-radius: 5px;
+            position: relative;
+            top: -1rem;
+            text-align: center;
+            @include g.flex-column-centre();
+            > .company-logo-container {
+                height: 50px;
+                width: 50px;
+                border-radius: 15px;
+                @include g.flex-centre();
+                position: absolute;
+                top: -25px;
+            }
+            > h1 {
+                margin-bottom: 0.5rem;
+            }
+            > .company-website-link {
+                text-decoration: none;
+                font-weight: 700;
+                color: g.$purple;
+                background-color: hsl(235, 69%, 61%, 0.1);
+                height: 3rem;
+                width: 147px;
+                border-radius: 5px;
+                @include g.flex-centre();
+                margin-top: 1.5rem;
+                &.company-website-link-dark {
+                    color: #FFFFFF;
+                    background-color: hsl(0, 0%, 100%, 0.1);
+                }
+            }
+        }
+        > .job-details {
+            width: 100%;
+            background-color: #FFFFFF;
+            padding: 2.5rem 1.2rem 2rem 1.2rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            @include g.flex-column-centre();
+            .secondary-text {
+                line-height: 1.5rem;
+            }
+            > .job-details-header {
+                width: 80%;
+                @include g.flex-column();
+                > .job-posted-contract {
+                    @include g.flex-centre();
+                    justify-content: flex-start;
+                    gap: 0.75rem;
+                    color: g.$secondaryText;
+                    > .separator {
+                        transform: scale(2.5) translateY(-2px);
+                    }
+                }
+                > h2 {
+                    margin: 0.6rem 0 1rem 0;
+                }
+                > .job-location {
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    color: g.$purple;
+                }
+                > .apply-now {
+                    width: 100%;
+                    margin-top: 3.2rem;
+                }
+            }
+            > .job-details-section {
+                margin-top: 2.5rem;
+                width: 100%;
+                > h3 {
+                    margin-bottom: 1.5rem;
+                }
+                > .job-items {
+                    padding-left: 1rem;
+                    margin-top: 1.5rem;
+                    > .job-item {
+                        padding-left: 1rem;
+                        &::marker {
+                            color: g.$purple;
+                            font-weight: bold;
+                        }
+                    }
+                    > .ordered-job-item::marker {
+                        content: counter(list-item) "  ";
+                    }
+                }
+            }
+        }
+        > .how-to-apply {
+            background: url('../../assets/mobile/bg-pattern-detail-footer.svg') no-repeat center;
+            background-size: cover;
+            margin-top: 2rem;
+            padding: 2rem 1.5rem;
+            width: 100%;
+            border-radius: 5px;
+            > h3, p, a {
+                color: #FFFFFF;
+            }
+            > p {
+                margin: 1.5rem 0;
+                line-height: 1.5rem;
+            }
+            > a {
+                font-weight: 700;
+            }
+        }
+    }
+    > .apply-container {
+        background-color: #FFFFFF;
+        margin-top: 3rem;
+        @include g.flex-centre();
+        padding: 1.5rem 0;
+        > .apply-now {
+            width: 87%;
+        }
+    }
+}

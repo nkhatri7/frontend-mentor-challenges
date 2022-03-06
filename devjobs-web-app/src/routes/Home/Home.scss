@@ -1,0 +1,31 @@
+@use '../../global' as g;
+
+.home {
+    @include g.flex-column-centre();
+    max-width: 87%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    > h1 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    > .jobs-container {
+        padding: 3.5rem 0 2rem 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        justify-content: center;
+        width: 100%;
+    }
+    > .load-more {
+        border: none;
+        border-radius: 5px;
+        background-color: g.$purple;
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        height: 3rem;
+        width: 7rem;
+    }
+}

@@ -1,0 +1,49 @@
+@use '../../global' as g;
+
+.job-card-container {
+    text-decoration: none;
+}
+.job-card {
+    width: 100%;
+    background-color: white;
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 5px;
+    position: relative;
+    &.job-card-dark {
+        background-color: g.$darkModeCard;
+    }
+    > .company-logo-container {
+        height: 50px;
+        width: 50px;
+        border-radius: 15px;
+        @include g.flex-centre();
+        position: absolute;
+        top: -25px;
+    }
+    > .job-details {
+        @include g.flex-centre();
+        justify-content: flex-start;
+        gap: 0.75rem;
+        color: g.$secondaryText;
+        > .separator {
+            transform: scale(2.5) translateY(-2px);
+        }
+    }
+    > .job-position {
+        font-size: 1.25rem;
+        margin: 0.8rem 0;
+        color: g.$primaryText;
+        &.job-position-dark {
+            color: g.$darkModePrimaryText;
+        }
+    }
+    > .job-company {
+        color: g.$secondaryText;
+        margin-bottom: 2rem;
+    }
+    > .job-location {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: g.$purple;
+    }
+}

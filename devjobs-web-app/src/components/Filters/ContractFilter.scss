@@ -1,0 +1,47 @@
+@use '../../global' as g;
+
+.contract-filter {
+    @include g.flex();
+    color: g.$primaryText;
+    font-weight: 700;
+    gap: 1rem;
+    &.dark-text {
+        color: g.$darkModePrimaryText;
+    }
+    > .checkbox-filter {
+        height: 24px;
+        width: 24px;
+        @include g.flex-centre();
+        appearance: none;
+        background-color: g.$purple;
+        border-radius: 3px;
+        opacity: 0.1;
+        transition: all 0.3s;
+        &::after {
+            content: url("../../assets/general/icon-check.svg");
+            display: none;
+        }
+        &:checked {
+            background-color: g.$purple;
+            opacity: 1;
+        }
+        &:checked::after {
+            display: block;
+        }
+    }
+    > p {
+        margin-left: 0.5rem;
+        font-weight: 700;
+        color: g.$primaryText;
+    }
+    .dark-text {
+        color: g.$darkModePrimaryText;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .checkbox-filter:hover {
+        background-color: g.$lightPurple !important;
+        opacity: 0.5 !important;
+    }
+}
