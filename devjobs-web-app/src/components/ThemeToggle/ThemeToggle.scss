@@ -22,9 +22,9 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: white;
-                -webkit-transition: .4s;
-                transition: .4s;
+                background-color: #FFFFFF;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
                 border-radius: 50px;
                 &::before {
                     position: absolute;
@@ -34,14 +34,15 @@
                     left: 5px;
                     bottom: 5px;
                     background-color: g.$purple;
-                    -webkit-transition: .4s;
-                    transition: .4s;
+                    transition: background-color 0.5s ease;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
                     border-radius: 50%;
                 }
             }
             .toggle-input:checked {
                 + .toggle {
-                    background-color: #cccef5;
+                    background-color: #FFFFFF;
                 }
                 + .toggle::before {
                     -webkit-transform: translateX(24px);
@@ -50,5 +51,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .toggle:hover::before {
+        background-color: g.$lightPurple !important;
     }
 }

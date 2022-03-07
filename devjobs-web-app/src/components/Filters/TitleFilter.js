@@ -8,7 +8,7 @@ const TitleFilter = ({ titleFilterText, handleTitleFilterChange }) => {
     const { isDarkMode } = useTheme();
 
     return (
-        <div className="filter-container">
+        <div className="filter-container title-filter-container">
             <SearchIcon className="search-icon" />
             <input 
                 type="text" 

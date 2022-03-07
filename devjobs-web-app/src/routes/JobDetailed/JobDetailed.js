@@ -28,8 +28,10 @@ const JobDetailed = ({ jobs }) => {
                             className="company-logo" 
                         />
                     </figure>
-                    <h1 className={isDarkMode ? 'heading-dark' : ''}>{job ? job.company : ''}</h1>
-                    <p className="secondary-text">{job ? job.website : ''}</p>
+                    <div className="company-banner-text">
+                        <h1 className={isDarkMode ? 'heading-dark' : ''}>{job ? job.company : ''}</h1>
+                        <p className="secondary-text">{job ? job.website : ''}</p>
+                    </div>
                     <a 
                         href={job ? job.website : '#'} 
                         className={`company-website-link ${isDarkMode ? 'company-website-link-dark' : ''}`}
@@ -40,13 +42,15 @@ const JobDetailed = ({ jobs }) => {
 
                 <section className={`job-details ${isDarkMode ? 'card-dark' : ''}`}>
                     <article className="job-details-header">
-                        <p className="job-posted-contract">
-                            {job ? job.postedAt : ''}
-                            <span className="separator">&#183;</span>
-                            {job ? job.contract : ''}    
-                        </p>
-                        <h2 className={isDarkMode ? 'heading-dark' : ''}>{job ? job.position : ''}</h2>
-                        <p className="job-location">{job ? job.location : ''}</p>
+                        <div className="job-details-header-text">
+                            <p className="job-posted-contract">
+                                {job ? job.postedAt : ''}
+                                <span className="separator">&#183;</span>
+                                {job ? job.contract : ''}    
+                            </p>
+                            <h2 className={isDarkMode ? 'heading-dark' : ''}>{job ? job.position : ''}</h2>
+                            <p className="job-location">{job ? job.location : ''}</p>
+                        </div>
                         <a href={job ? job.apply : '#'} className="apply-now">Apply Now</a>
                     </article>
 
@@ -91,7 +95,15 @@ const JobDetailed = ({ jobs }) => {
                 </section>
             </div>
             <article className={`apply-container ${isDarkMode ? 'card-dark' : ''}`}>
-                <a href={job ? job.apply : '#'} className="apply-now">Apply Now</a>
+                <div className="apply-wrapper">
+                    <div className="apply-job-details">
+                        <h3 className={isDarkMode ? 'heading-dark' : ''}>
+                            {job ? job.position : ''}
+                        </h3>
+                        <p className="secondary-text">{job ? job.company : ''}</p>
+                    </div>
+                    <a href={job ? job.apply : '#'} className="apply-now">Apply Now</a>
+                </div>
             </article>
         </div>
     );

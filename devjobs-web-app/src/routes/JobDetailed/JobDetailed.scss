@@ -15,20 +15,26 @@
         text-decoration: none;
         height: 3rem;
         @include g.flex-centre();
+        transition: background-color 0.5s ease;
     }
     .card-dark {
         background-color: g.$darkModeCard !important;
     }
     > .container {
-        max-width: 87%;
+        width: 89%;
         margin: 0 auto;
         position: relative;
+        h1, h2, h3 {
+            color: g.$primaryText;
+        }
         h1 {
             font-size: 1.3rem;
         }
-        h2, h3 {
+        h2 {
+            font-size: 1.25rem;
+        }
+        h3 {
             font-size: 1.2rem;
-            color: g.$primaryText;
         }
         .heading-dark {
             color: g.$darkModePrimaryText !important;
@@ -53,8 +59,11 @@
                 position: absolute;
                 top: -25px;
             }
-            > h1 {
-                margin-bottom: 0.5rem;
+            > .company-banner-text {
+                @include g.flex-column-centre();
+                > h1 {
+                    margin-bottom: 0.5rem;
+                }
             }
             > .company-website-link {
                 text-decoration: none;
@@ -66,6 +75,7 @@
                 border-radius: 5px;
                 @include g.flex-centre();
                 margin-top: 1.5rem;
+                transition: opacity 0.5s ease;
                 &.company-website-link-dark {
                     color: #FFFFFF;
                     background-color: hsl(0, 0%, 100%, 0.1);
@@ -75,32 +85,35 @@
         > .job-details {
             width: 100%;
             background-color: #FFFFFF;
-            padding: 2.5rem 1.2rem 2rem 1.2rem;
+            padding: 2.5rem 1.3rem 2rem 1.3rem;
             border-radius: 5px;
-            margin-top: 1rem;
             @include g.flex-column-centre();
             .secondary-text {
                 line-height: 1.5rem;
             }
             > .job-details-header {
-                width: 80%;
+                width: max-content;
                 @include g.flex-column();
-                > .job-posted-contract {
-                    @include g.flex-centre();
-                    justify-content: flex-start;
-                    gap: 0.75rem;
-                    color: g.$secondaryText;
-                    > .separator {
-                        transform: scale(2.5) translateY(-2px);
+                > .job-details-header-text {
+                    width: 100%;
+                    @include g.flex-column();
+                    > .job-posted-contract {
+                        @include g.flex-centre();
+                        justify-content: flex-start;
+                        gap: 0.75rem;
+                        color: g.$secondaryText;
+                        > .separator {
+                            transform: scale(2.5) translateY(-2px);
+                        }
                     }
-                }
-                > h2 {
-                    margin: 0.6rem 0 1rem 0;
-                }
-                > .job-location {
-                    font-size: 0.9rem;
-                    font-weight: 700;
-                    color: g.$purple;
+                    > h2 {
+                        margin: 0.6rem 0 1rem 0;
+                    }
+                    > .job-location {
+                        font-size: 0.9rem;
+                        font-weight: 700;
+                        color: g.$purple;
+                    }
                 }
                 > .apply-now {
                     width: 100%;
@@ -152,9 +165,98 @@
         background-color: #FFFFFF;
         margin-top: 3rem;
         @include g.flex-centre();
-        padding: 1.5rem 0;
-        > .apply-now {
-            width: 87%;
+        > .apply-wrapper {
+            @include g.flex-centre();
+            padding: 1.5rem 0;
+            width: 89%;
+            > .apply-job-details {
+                @include g.flex-column();
+                display: none;
+                > h3 {
+                    font-size: 1.25rem;
+                }
+                > .heading-dark {
+                    color: g.$darkModePrimaryText !important;
+                }
+                > .secondary-text {
+                    color: g.$secondaryText;
+                    font-size: 1.1rem;
+                    line-height: 1.5rem;
+                    margin-top: 0.5rem;
+                }
+            }
+            > .apply-now {
+                width: 100%;
+            }
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container, .apply-wrapper {
+        max-width: 730px !important;
+    }
+    .company-banner {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        padding: 0 2.5rem 0 0 !important;
+        top: -2rem !important;
+        > .company-logo-container {
+            position: relative !important;
+            top: 0 !important;
+            height: 140px !important;
+            width: 140px !important;
+            border-radius: 5px 0 0 5px !important;
+        }
+        > .company-banner-text {
+            align-items: flex-start !important;
+            width: 45%;
+        }
+        > .company-website-link {
+            margin-top: 0 !important;
+        }
+    }
+    .container > .job-details {
+        padding: 2.5rem 3rem !important;
+        margin-top: 0.5rem;
+        > .job-details-header {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+            h2 {
+                font-size: 1.75rem !important;
+            }
+            > .apply-now {
+                width: 11rem !important;
+                margin-top: 0 !important;
+            }
+        }
+    }
+    .how-to-apply {
+        padding: 3rem !important;
+        background: url('../../assets/desktop/bg-pattern-detail-footer.svg') no-repeat center;
+        background-size: cover;
+    }
+    .apply-wrapper {
+        justify-content: space-between !important;
+        > .apply-job-details {
+            display: flex !important;
+        }
+        > .apply-now {
+            width: 9rem !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .apply-now:hover, .company-website-link:hover {
+        cursor: pointer;
+    }
+    .apply-now:hover {
+        background-color: g.$lightPurple;
+    }
+    .company-website-link:hover {
+        opacity: 0.7;
     }
 }

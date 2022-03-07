@@ -2,7 +2,7 @@
 
 .home {
     @include g.flex-column-centre();
-    max-width: 87%;
+    width: 89%;
     margin: 0 auto;
     padding-bottom: 3rem;
     > h1 {
@@ -27,5 +27,28 @@
         font-size: 1rem;
         height: 3rem;
         width: 7rem;
+        transition: background-color 0.5s ease;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home > .jobs-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 4.1rem 0.7rem;
+            max-width: none;
+            padding: 4rem 0 2rem 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home {
+        max-width: 1110px;
+        > .jobs-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        > .load-more:hover {
+            cursor: pointer;
+            background-color: g.$lightPurple;
+        }
     }
 }

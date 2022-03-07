@@ -28,6 +28,12 @@ const SearchBar = ({ filterJobs }) => {
             }
         }
 
+        if (displayModal) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+
         document.body.addEventListener('mousedown', closeModal);
 
         return () => {
@@ -68,23 +74,35 @@ const SearchBar = ({ filterJobs }) => {
                 titleFilterText={titleFilterText} 
                 handleTitleFilterChange={handleTitleFilterChange} 
             />
-            <button 
-                className="filter-btn" 
-                aria-label='Filters' 
-                onClick={handleFilterClick}
-            >
-                <FilterIcon />
-                <span className="hidden">Filter</span>
-            </button>
-            <button 
-                type="submit" 
-                className="search-btn" 
-                aria-label='Search' 
-                onClick={handleSearch}
-            >
-                <img src={searchBtnIcon} alt="Search Icon" className="search-btn-icon" />
-                <span className="search-btn-text">Search</span>  
-            </button>
+            <LocationFilter 
+                locationFilterText={locationFilterText}
+                handleLocationFilterchange={handleLocationFilterChange}
+                modal={false}
+            />
+            <ContractFilter 
+                fullTimeFilter={fullTimeFilter}
+                handleFullTimeFilterChange={handleFullTimeFilterChange}
+                modal={false}
+            />
+            <div className="container">
+                <button 
+                    className="filter-btn" 
+                    aria-label='Filters' 
+                    onClick={handleFilterClick}
+                >
+                    <FilterIcon />
+                    <span className="hidden">Filter</span>
+                </button>
+                <button 
+                    type="submit" 
+                    className="search-btn" 
+                    aria-label='Search' 
+                    onClick={handleSearch}
+                >
+                    <img src={searchBtnIcon} alt="Search Icon" className="search-btn-icon" />
+                    <span className="search-btn-text">Search</span>  
+                </button>
+            </div>
             <div className={`overlay ${displayModal ? 'overlay-active' : ''}`}>
                 <div 
                     ref={filterModal} 
@@ -101,6 +119,7 @@ const SearchBar = ({ filterJobs }) => {
                         <ContractFilter 
                             fullTimeFilter={fullTimeFilter}
                             handleFullTimeFilterChange={handleFullTimeFilterChange} 
+                            modal={true}
                         />
                     </div>
                     <button className="modal-search-btn" onClick={handleModalSearch}>

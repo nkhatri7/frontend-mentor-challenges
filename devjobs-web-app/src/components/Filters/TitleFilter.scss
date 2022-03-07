@@ -1,3 +1,28 @@
-.filter-container > .search-icon {
-    display: none;
+.filter-container {
+    > .search-icon {
+        display: none;
+    }
+    > .desktop-title-filter {
+        display: none;
+    }
+}   
+
+@media screen and (min-width: 768px) {
+    .filter-container > .search-icon {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .title-filter-container {
+        width: 43% !important;
+        padding-left: 1rem;
+        > .desktop-title-filter {
+            display: flex !important;
+            width: 17rem;
+        }
+    }
+    .mobile-title-filter {
+        display: none;
+    }
 }

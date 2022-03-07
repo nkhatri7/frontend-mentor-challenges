@@ -1,3 +1,18 @@
 .filter-input-modal {
     margin-left: 1rem !important;
 }
+.filter-container-non-mobile {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    .filter-container-non-mobile {
+        display: flex !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .location-filter-container {
+        width: 25% !important;
+    }
+}

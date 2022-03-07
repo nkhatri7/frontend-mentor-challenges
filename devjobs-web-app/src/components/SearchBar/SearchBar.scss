@@ -5,6 +5,10 @@
     to { opacity: 1; }
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
 .search-bar {
     width: 100%;
     height: 80px;
@@ -28,35 +32,36 @@
             &:focus {
                 outline: none !important;
             }
-            &.desktop-title-filter {
-                display: none;
-            }
             &.filter-input-dark {
                 color: g.$darkModePrimaryText;
             }
         }
     }
-    > .filter-btn {
-        border: none;
-        background-color: transparent;
-        > .hidden {
-            display: none;
-        }
-    }
-    > .search-btn {
-        background-color: g.$purple;
-        border: none;
-        height: 3rem;
-        width: 3rem;
-        border-radius: 5px;
+    > .container {
         @include g.flex-centre();
-        > .search-btn-icon {
-            max-height: 20px;
-            max-width: 20px;
-            filter: brightness(100);
+        > .filter-btn {
+            border: none;
+            background-color: transparent;
+            margin-right: 1.5rem;
+            > .hidden {
+                display: none;
+            }
         }
-        > .search-btn-text {
-            display: none;
+        > .search-btn {
+            background-color: g.$purple;
+            border: none;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 5px;
+            @include g.flex-centre();
+            > .search-btn-icon {
+                max-height: 20px;
+                max-width: 20px;
+                filter: brightness(100);
+            }
+            > .search-btn-text {
+                display: none;
+            }
         }
     }
     > .overlay {
@@ -109,6 +114,46 @@
                 margin: 2rem auto 0 auto;
                 @include g.flex-centre();
             }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .filter-container {
+        height: 90%;
+        width: 32%;
+        border-right: 2px solid rgba(109, 157, 121, 0.2);
+        .filter-input {
+            margin-left: 1rem !important;
+        }
+    }
+    .filter-btn {
+        display: none;
+    }
+    .search-btn {
+        width: 5.5rem !important;
+        > .search-btn-icon {
+            display: none;
+        }
+        > .search-btn-text {
+            display: block !important;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .filter-container {
+        border-right: 1px solid rgba(109, 157, 121, 0.2) !important;
+    }
+    .search-btn {
+        width: 7.5rem !important;
+        transition: background-color 0.5s ease;
+        &:hover {
+            cursor: pointer;
+            background-color: g.$lightPurple !important;
         }
     }
 }

@@ -7,7 +7,30 @@
     padding-top: 2rem;
     @include g.flex-column-centre();
     > .header-wrapper {
-        width: 87%;
+        width: 89%;
         @include g.justify-between();
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: 160px;
+        background: url("../../assets/tablet/bg-pattern-header.svg") no-repeat center;
+        background-size: cover;
+        padding-top: 2.5rem;
+        > .header-wrapper {
+            width: 89%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        height: 162px;
+        background: url('../../assets/desktop/bg-pattern-header.svg') no-repeat center;
+        background-size: cover;
+        > .header-wrapper {
+            max-width: 1110px;
+        }
     }
 }

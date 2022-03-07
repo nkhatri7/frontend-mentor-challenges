@@ -8,15 +8,21 @@
     &.dark-text {
         color: g.$darkModePrimaryText;
     }
+    &.non-mobile-contract-filter {
+        display: none;
+    }
     > .checkbox-filter {
         height: 24px;
         width: 24px;
         @include g.flex-centre();
         appearance: none;
-        background-color: g.$purple;
+        background-color: g.$primaryText;
         border-radius: 3px;
         opacity: 0.1;
         transition: all 0.3s;
+        &.checkbox-filter-dark {
+            background-color: g.$darkModePrimaryText;
+        }
         &::after {
             content: url("../../assets/general/icon-check.svg");
             display: none;
@@ -29,17 +35,30 @@
             display: block;
         }
     }
-    > p {
-        margin-left: 0.5rem;
-        font-weight: 700;
-        color: g.$primaryText;
-    }
     .dark-text {
         color: g.$darkModePrimaryText;
+    }
+    > .non-tablet-text {
+        margin-left: -0.7rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .non-tablet-text {
+        display: none;
+    }
+    .non-mobile-contract-filter {
+        display: flex !important;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .contract-filter:hover {
+        cursor: pointer;
+    }
+    .non-tablet-text {
+        display: block;
+    }
     .checkbox-filter:hover {
         background-color: g.$lightPurple !important;
         opacity: 0.5 !important;

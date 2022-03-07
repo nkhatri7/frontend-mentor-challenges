@@ -8,7 +8,9 @@ const LocationFilter = ({ locationFilterText, handleLocationFilterchange, modal 
     const { isDarkMode } = useTheme();
 
     return (
-        <div className="filter-container">
+        <div className={`filter-container location-filter-container 
+            ${!modal ? 'filter-container-non-mobile' : ''}`}
+        >
             <LocationIcon />
             <input 
                 type="text"

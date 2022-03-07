@@ -47,3 +47,21 @@
         color: g.$purple;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .job-card {
+        transition: box-shadow 0.5s ease;
+        &:hover {
+            box-shadow: 0 0px 30px -15px rgba(0, 0, 0, 0.5);
+        }
+        &.job-card-dark:hover {
+            box-shadow: 0 0px 40px -15px #000000;
+        }
+    }
+    .job-position {
+        transition: opacity 0.5s ease;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
