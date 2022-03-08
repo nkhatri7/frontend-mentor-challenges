@@ -4,10 +4,10 @@ This is a repository for all the [Frontend Mentor](https://www.frontendmentor.io
 
 ## Standout Challenges (Intermediate and Advanced)
 
-| Challenge            | Difficulty | Source Code | Live Site |
-| -------------------- | ---------- | ----------- | --------- |
-| Devjobs Web App      | Advanced   | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/devjobs-web-app) | [Link](https://devjobs-nkhatri7.netlify.app/) |
-| REST Countries API   | Advanced   | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/rest-countries-api) | [Link](https://rest-countries-api-nkhatri7.netlify.app/) |
+| Challenge | Difficulty | Source Code | Live Site |
+| :--- | :--- | :--- | :--- |
+| Devjobs Web App | Advanced   | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/devjobs-web-app) | [Link](https://devjobs-nkhatri7.netlify.app/) |
+| REST Countries API | Advanced   | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/rest-countries-api) | [Link](https://rest-countries-api-nkhatri7.netlify.app/) |
 | Interactive Comments Section | Intermediate | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/interactive-comments-section) | [Link](https://interactive-comments-section-nkhatri7.netlify.app/) |
 | E-commerce Product Page | Intermediate | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/e-commerce-product-page) | [Link](https://e-commerce-product-page-nkhatri7.netlify.app/) |
 | Space Tourism Multi-Page Website | Intermediate | [Link](https://github.com/nkhatri7/Frontend-Mentor-Challenges/tree/main/Space-Tourism-Website) | [Link](https://nkhatri7.github.io/Space-Tourism-Website/) |
