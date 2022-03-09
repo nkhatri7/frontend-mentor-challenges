@@ -21,7 +21,9 @@ const TitleFilter = ({ titleFilterText, handleTitleFilterChange }) => {
             />
             <input 
                 type="text" 
-                className="filter-input desktop-title-filter" 
+                className={`filter-input desktop-title-filter 
+                    ${isDarkMode ? 'filter-input-dark' : ''}`
+                } 
                 placeholder='Filter by title, companies, expertise...' 
                 value={titleFilterText}
                 onChange={handleTitleFilterChange}

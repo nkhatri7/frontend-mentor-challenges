@@ -57,6 +57,13 @@ const Home = ({ jobs }) => {
                     />
                 )) : null}
             </section>
+            {filteredJobs ? (filteredJobs.length === 0) ? 
+                <div className={`no-jobs ${isDarkMode ? 'no-jobs-dark' : ''}`}>
+                    No jobs can be found with your search. Please try something else.
+                </div>
+                : null
+                : null
+            }
             {filteredJobs ? (visibleJobs < filteredJobs.length) ? 
                 <button className="load-more" onClick={loadMoreJobs}>
                     Load More

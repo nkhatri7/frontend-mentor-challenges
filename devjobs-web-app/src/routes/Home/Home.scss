@@ -18,6 +18,15 @@
         justify-content: center;
         width: 100%;
     }
+    > .no-jobs {
+        color: g.$primaryText;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        &.no-jobs-dark {
+            color: g.$darkModePrimaryText;
+        }
+    }
     > .load-more {
         border: none;
         border-radius: 5px;
@@ -32,12 +41,17 @@
 }
 
 @media screen and (min-width: 768px) {
-    .home > .jobs-container {
+    .home {
+        > .jobs-container {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 4.1rem 0.7rem;
             max-width: none;
             padding: 4rem 0 2rem 0;
-    }
+        }
+        > .no-jobs {
+            font-size: 1.5rem;
+        }
+    } 
 }
 
 @media screen and (min-width: 1024px) {
