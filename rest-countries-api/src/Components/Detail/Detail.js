@@ -27,7 +27,13 @@ const Detail = ({ data, darkMode, toggleTheme }) => {
     useEffect(() => {
         if (countryData !== []) {
             setLoaded(true);
-            getBorderCountries();
+            if (countryData.hasOwnProperty('borders')) {
+                countryData.borders.forEach(async border => {
+                    const response = await fetch(`https://restcountries.com/v2/alpha/${border}`);
+                    const data = await response.json();
+                    setBorderData(prevData => [...prevData, data]);
+                });
+            }
         }
     }, [countryData]);
 
@@ -50,18 +56,6 @@ const Detail = ({ data, darkMode, toggleTheme }) => {
         let languages = [];
         countryData.languages.forEach(language => languages.push(language.name));
         return languages.join(', ');
-    }
-
-    const getBorderCountries = () => {
-        if (countryData.hasOwnProperty('borders')) {
-            countryData.borders.forEach(async border => {
-                const response = await fetch(`https://restcountries.com/v2/alpha/${border}`);
-                const data = await response.json();
-                setBorderData(prevData => [...prevData, data]);
-            });
-        } else {
-            return null;
-        }
     }
 
     const borderCountries = borderData.map(border => {

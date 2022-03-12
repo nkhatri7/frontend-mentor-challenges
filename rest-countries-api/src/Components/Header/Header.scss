@@ -9,8 +9,12 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 1.6rem 1rem;
-        > h1 {
-            font-size: 0.9rem;
+        > .heading-link {
+            text-decoration: none;
+            color: #000000;
+            > h1 {
+                font-size: 0.9rem;
+            }
         }
         > .theme-toggle {
             border: none;
