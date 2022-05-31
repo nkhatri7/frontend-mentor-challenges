@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+$almostWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$almostBlack: hsl(0, 0%, 8%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    font-size: 18px;
+    background-color: $almostWhite;
+}
+
+@mixin flex-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justify-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@mixin flex-column-centre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hidden {
+    display: none
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+@keyframes overlay-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  
+.overlay {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    animation-name: overlay-animation;
+    animation-duration: 0.3s;
+    &.overlay-active {
+        display: block;
+    }
+}
+
+header {
+    @include justify-between();
+    padding: 2rem 1.5rem;
+    > .menu-btn {
+        background: url('../images/icon-menu.svg') no-repeat center;
+        height: 1.5rem;
+        width: 1.5rem;
+        border: none;
+        z-index: 2;
+        &.menu-btn-open {
+            background: url('../images/icon-close-menu.svg') no-repeat center;
+        }
+    }
+    > .nav {
+        @include flex-column();
+        gap: 2rem 0;
+        position: fixed;
+        inset: 0 0 0 30%;
+        z-index: 1;
+        padding: 6rem 2rem 0 2rem;
+        height: 100vh;
+        background-color: white;
+        transform: translateX(100%);
+        transition: tranform 500ms ease-in-out;
+        -webkit-transition: transform 500ms ease-in-out;
+        .nav-link {
+            color: $mediumGray;
+            text-decoration: none;
+        }
+        .nav-link, .inner-nav-item-container {
+            transition: color 0.3s ease-in-out;
+        }
+        > .nav-pages {
+            @include flex-column();
+            gap: 1.5rem 0;
+            > .nav-item {
+                list-style: none;
+                color: $mediumGray;
+                &.dropdown {
+                    position: relative;
+                    @include flex-column();
+                    > .inner-nav-item-container {
+                        @include flex-centre();
+                        gap: 0 0.5rem;
+                        > .nav-item-arrow {
+                            height: 1rem;
+                            width: 1rem;
+                            background: url('../images/icon-arrow-down.svg') no-repeat center;
+                            transition: transform 0.3s ease-in-out;
+                            &.nav-item-arrow-open {
+                                transform: rotate(-180deg);
+                                -moz-transform: rotate(-180deg);
+                                -webkit-transform: rotate(-180deg);
+                                -o-transform: rotate(-180deg);
+                                -ms-transform: rotate(-180deg);
+                            }
+                        }
+                    }
+                    > .nested-list {
+                        @include flex-column();
+                        gap: 1rem 0;
+                        padding: 0 0 0 1rem;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+                        &.nested-list-open {
+                            display: flex;
+                            padding-top: 1rem;
+                            max-height: 200px;
+                        }
+                        > .nested-nav-item {
+                            list-style: none;
+                            color: $mediumGray;
+                            > .nav-link {
+                                @include flex-centre();
+                                gap: 0 0.5rem;
+                                > .nested-nav-item-icon {
+                                    width: 1rem;
+                                }
+                                > .nested-nav-item-text {
+                                    margin-top: 0.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > .nav-auth {
+            width: 100%;
+            @include flex-column-centre();
+            gap: 1.5rem 0;
+            > .nav-item {
+                list-style: none;
+                width: 100%;
+                @include flex-centre();
+                > .cta-secondary {
+                    @include flex-centre();
+                    padding: 0.7rem 0;
+                    width: 100%;
+                    border: 2px solid $mediumGray;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &.mobile-nav-open {
+            transform: translateX(0);
+        }
+    }
+}
+
+main {
+    @include flex-column-centre();
+    gap: 2rem 0;
+    > .hero-img-mobile {
+        width: 100vw;
+    }
+    > .hero-img-desktop {
+        display: none;
+    }
+    > .hero-content {
+        @include flex-column-centre();
+        width: 100%;
+        padding: 0 1rem;
+        > .hero-text-content {
+            @include flex-column-centre();
+            width: 100%;
+            text-align: center;
+            > h1 {
+                font-size: 2rem;
+            }
+            > .body-text {
+                color: $mediumGray;
+                margin: 1.5rem 0 2rem 0;
+            }
+            > .cta {
+                background-color: $almostBlack;
+                color: $almostWhite;
+                text-decoration: none;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+        > .clients {
+            @include justify-between();
+            width: 100%;
+            margin: 2rem 0;
+            > .client-logo {
+                max-width: 20%;
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    > a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        justify-content: flex-start;
+        gap: 0 2rem;
+        > .menu-btn {
+            display: none;
+        }
+        > .nav {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            inset: 0;
+            padding: 0;
+            height: auto;
+            background-color: transparent;
+            transform: translateX(0);
+            > .nav-pages, > .nav-auth {
+                flex-direction: row;
+                gap: 0 1rem;
+            }
+            > .nav-pages > .nav-item.dropdown > .nested-list {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                min-width: 150px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                &.nested-list-open {
+                    padding: 1.5rem 2rem;
+                }
+            }
+            > .nav-auth {
+                width: auto;
+                > .nav-item {
+                    width: max-content;
+                    > .cta-secondary {
+                        padding: 0.7rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    main > .hero-content {
+        padding: 0 2rem;
+        > .hero-text-content > h1 {
+            font-size: 3rem;
+        }
+        > .clients {
+            margin: 3rem 0;
+            > .client-logo {
+                width: 6rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        gap: 0 4rem;
+        padding: 2rem 5rem;
+        > .nav > .nav-pages, > .nav > .nav-auth {
+            gap: 0 2rem;
+        }
+    }
+
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 5rem 2rem 5rem;
+        max-width: 1440px;
+        margin: 0 auto;
+        > .hero-img-mobile {
+            display: none;
+        }
+        > .hero-img-desktop {
+            display: block;
+            width: 40%;
+        }
+        > .hero-content {
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0;
+            max-width: 40%;
+            margin-top: 4rem;
+            > .hero-text-content {
+                align-items: flex-start;
+                text-align: left;
+                > .body-text {
+                    margin: 2.5rem 0 3rem 0;
+                }
+            }
+            > .clients {
+                margin: 5rem 0 0 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-item:not(.dropdown):hover .nav-link, .nested-nav-item:hover > .nav-link {
+        color: $almostBlack;
+    }
+
+    .inner-nav-item-container:hover {
+        cursor: pointer;
+        color: $almostBlack;
+    }
+
+    .cta-secondary:hover {
+        background-color: $almostBlack;
+        color: $almostWhite !important;
+        border-color: $almostBlack !important;
+    }
+
+    main > .hero-content {
+        margin-top: 6rem;
+        > .hero-text-content {
+            > h1 {
+                font-size: 3.5rem;
+            }
+            > .cta:hover {
+                opacity: 0.7;
+            }
+        } 
+        > .clients {
+            margin: 8rem 0 0 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main > .hero-content > .clients {
+        margin: 14.5rem 0 0 0;
+    }
+}

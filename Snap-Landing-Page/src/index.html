@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css">
+
+  <script src="./assets/js/main.min.js" defer></script>
+  
+  <title>snap</title>
+</head>
+<body>
+  <header>
+    <a href="/" class="logo-container">
+      <img src="./assets/images/logo.svg" alt="Snap Logo" class="logo">
+    </a>
+    <button class="menu-btn" aria-label="Menu" type="button">
+      <span class="hidden">Menu</span>
+    </button>
+    <nav class="nav">
+      <ul class="nav-pages">
+        <li class="nav-item dropdown">
+          <div class="inner-nav-item-container" data-nav-item="features">
+            <span>Features</span>
+            <div class="nav-item-arrow" data-nav-item="features"></div>
+          </div>
+          <ul class="nested-list" data-nav-item="features">
+            <li class="nested-nav-item">
+              <a href="#" class="nav-link">
+                <img src="./assets/images/icon-todo.svg" alt="" class="nested-nav-item-icon">
+                <span class="nested-nav-item-text">Todo List</span>
+              </a>
+            </li>
+            <li class="nested-nav-item">
+              <a href="#" class="nav-link">
+                <img src="./assets/images/icon-calendar.svg" alt="" class="nested-nav-item-icon">
+                <span class="nested-nav-item-text">Calendar</span>
+              </a>
+            </li>
+            <li class="nested-nav-item">
+              <a href="#" class="nav-link">
+                <img src="./assets/images/icon-reminders.svg" alt="" class="nested-nav-item-icon">
+                <span class="nested-nav-item-text">Reminders</span>
+              </a>
+            </li>
+            <li class="nested-nav-item">
+              <a href="#" class="nav-link">
+                <img src="./assets/images/icon-planning.svg" alt="" class="nested-nav-item-icon">
+                <span class="nested-nav-item-text">Planning</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="inner-nav-item-container" data-nav-item="company">
+            <span>Company</span>
+            <div class="nav-item-arrow" data-nav-item="company"></div>
+          </div>
+          <ul class="nested-list" data-nav-item="company">
+            <li class="nested-nav-item"><a href="#" class="nav-link">History</a></li>
+            <li class="nested-nav-item"><a href="#" class="nav-link">Our Team</a></li>
+            <li class="nested-nav-item"><a href="#" class="nav-link">Blog</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+      <ul class="nav-auth">
+        <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="#" class="nav-link cta-secondary">Register</a></li>
+      </ul>
+    </nav>
+    <div class="overlay"></div>
+  </header>
+  <main>
+    <img src="./assets/images/image-hero-mobile.png" alt="Man using laptop" class="hero-img hero-img-mobile">
+    <img src="./assets/images/image-hero-desktop.png" alt="Man using laptop" class="hero-img hero-img-desktop">
+    <section class="hero-content">
+      <article class="hero-text-content">
+        <h1>Make remote work</h1>
+        <p class="body-text">
+          Get your team in sync, no matter your location. Streamline processes, create team rituals, 
+          and watch productivity soar.
+        </p>
+        <a href="#" class="cta">Learn more</a>
+      </article>
+      <article class="clients">
+        <img src="./assets/images/client-databiz.svg" alt="Databiz" class="client-logo">
+        <img src="./assets/images/client-audiophile.svg" alt="Audiophile" class="client-logo">
+        <img src="./assets/images/client-meet.svg" alt="Meet" class="client-logo">
+        <img src="./assets/images/client-maker.svg" alt="Maker" class="client-logo">
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://neilkhatri.com/" rel="noreferrer noopener" target="_blank">Neil Khatri</a>.
+    </div>
+  </footer>
+</body>
+</html>
