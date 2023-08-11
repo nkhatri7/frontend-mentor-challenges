@@ -1,0 +1,15 @@
+:root {
+  --base: #d6e2f0;
+  --body-text: #7b879d;
+  --heading: #1f3251;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--base);
+}
