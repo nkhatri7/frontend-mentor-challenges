@@ -1,0 +1,9 @@
+@use "../../global" as g;
+
+.card {
+  background-color: g.$card-bg;
+  padding: 2rem 1.7rem;
+  border-radius: 10px;
+  width: 90vw;
+  max-width: 350px;
+}

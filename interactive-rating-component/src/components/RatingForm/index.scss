@@ -1,0 +1,43 @@
+@use "../../global" as g;
+
+.rating-form-container {
+  .bubble {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  > h1 {
+    margin: 1rem 0;
+  }
+  .rating-form {
+    > .rating-form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      padding: 2rem 0;
+      input[type="radio"] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        position: absolute;
+      }
+      .rating-form-option {
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover {
+          background-color: #7E8795;
+          color: white;
+        }
+      }
+      input[type="radio"]:checked + label {
+        background-color: g.$primary-accent;
+        color: white;
+      }
+    }
+    .form-submit-btn {
+      width: 100%;
+    }
+  }
+}

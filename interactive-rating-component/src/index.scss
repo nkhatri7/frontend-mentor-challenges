@@ -1,11 +1,13 @@
+@use "./global" as g;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Overpass", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 15px;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,4 +20,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Overpass", Inter;
+}
+
+body {
+  color: g.$text-color;
+  background-color: g.$base;
 }
