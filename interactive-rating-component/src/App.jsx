@@ -9,7 +9,7 @@ const App = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
-    <div className="app-container">
+    <main className="app-container">
       <Card>
         {hasSubmitted ? (
           <ThankYou rating={rating} />
@@ -17,7 +17,7 @@ const App = () => {
           <RatingForm setRating={setRating} setHasSubmitted={setHasSubmitted} />
         )}
       </Card>
-    </div>
+    </main>
   );
 };
 
