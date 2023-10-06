@@ -27,7 +27,7 @@ module.exports = {
     "no-duplicate-imports": "warn",
     "array-bracket-spacing": "warn",
     "arrow-spacing": "warn",
-    "indent": ["warn", 2],
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
     "key-spacing": "warn",
     "no-multi-spaces": "warn",
     "object-curly-spacing": ["warn", "always"],

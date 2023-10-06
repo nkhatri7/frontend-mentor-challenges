@@ -1,0 +1,100 @@
+.item {
+  position: absolute;
+  height: clamp(90px, 24vw, 150px);
+  width: clamp(90px, 24vw, 150px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &[data-action="Rock"] {
+    background: var(--rock-gradient);
+    box-shadow: 0px 3px var(--rock-shadow);
+    @media screen and (min-width: 768px) {
+      box-shadow: 0px 5px var(--rock-shadow);
+    }
+  }
+  &[data-action="Paper"] {
+    background: var(--paper-gradient);
+    box-shadow: 0px 3px var(--paper-shadow);
+    @media screen and (min-width: 768px) {
+      box-shadow: 0px 5px var(--paper-shadow);
+    }
+  }
+  &[data-action="Scissors"] {
+    background: var(--scissors-gradient);
+    box-shadow: 0px 3px var(--scissors-shadow);
+    @media screen and (min-width: 768px) {
+      box-shadow: 0px 5px var(--scissors-shadow);
+    }
+  }
+  &[data-action="Lizard"] {
+    background: var(--lizard-gradient);
+    box-shadow: 0px 3px var(--lizard-shadow);
+    @media screen and (min-width: 768px) {
+      box-shadow: 0px 5px var(--lizard-shadow);
+    }
+  }
+  &[data-action="Spock"] {
+    background: var(--spock-gradient);
+    box-shadow: 0px 3px var(--spock-shadow);
+    @media screen and (min-width: 768px) {
+      box-shadow: 0px 5px var(--spock-shadow);
+    }
+  }
+
+  .item-inner {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: #E9E9E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    box-shadow: 0px -3px #C3C5D3;
+    @media screen and (min-width: 768px) {
+      margin-top: 5px;
+      box-shadow: 0px -5px #C3C5D3;
+    }
+  }
+
+  .item-icon {
+    max-width: 47%;
+  }
+}
+
+// Items in action selector component/view
+.action-selector .item {
+  cursor: pointer;
+  &[data-action="Rock"] {
+    bottom: -3%;
+    right: 10%;
+  }
+  &[data-action="Paper"] {
+    top: 27%;
+    right: -3%;
+  }
+  &[data-action="Scissors"] {
+    top: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &[data-action="Lizard"] {
+    bottom: -3%;
+    left: 13%;
+  }
+  &[data-action="Spock"] {
+    top: 27%;
+    left: -3%;
+  }
+  // Onclick effect - button press down
+  &:active {
+    transform: translateY(5px);
+    &[data-action="Scissors"] {
+      transform: translate(-50%, 5px);
+    }
+    box-shadow: none;
+    transition: translate;
+  }
+}
