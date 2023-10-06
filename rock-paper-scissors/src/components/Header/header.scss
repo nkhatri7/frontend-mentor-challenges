@@ -9,10 +9,7 @@ header {
   padding: clamp(10px, 2.6vw, 20px);
 }
 
-h1 {
-  font-size: clamp(12px, 3vw, 24px);
-  line-height: clamp(10px, 2.8vw, 20px);
-  font-weight: 700;
-  max-width: 50px;
+.logo {
   padding-left: 10px;
+  width: clamp(60px, 13.5vw, 110px);
 }

@@ -1,11 +1,16 @@
 import { FC } from "react";
 import Score from "../Score";
+import Logo from "../../assets/images/logo-bonus.svg";
 import "./header.scss";
 
 const Header: FC = () => {
   return (
     <header>
-      <h1>ROCK PAPER SCISSORS LIZARD SPOCK</h1>
+      <img
+        src={Logo}
+        alt="Rock Paper Scissors Lizard Spock"
+        className="logo"
+      />
       <Score />
     </header>
   );
