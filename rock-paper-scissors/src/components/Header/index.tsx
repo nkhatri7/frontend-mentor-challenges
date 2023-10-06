@@ -1,6 +1,6 @@
 import { FC } from "react";
-import "./header.scss";
 import Score from "../Score";
+import "./header.scss";
 
 const Header: FC = () => {
   return (
