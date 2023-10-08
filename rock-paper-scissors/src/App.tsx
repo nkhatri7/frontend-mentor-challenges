@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Header from "./components/Header";
 import ActionSelector from "./components/ActionSelector";
+import Header from "./components/Header";
 import RulesButton from "./components/Rules/RulesButton";
-import "./App.scss";
 import RulesModal from "./components/Rules/RulesModal";
+import "./App.scss";
 
 function App() {
   const [showRules, setShowRules] = useState<boolean>(false);
