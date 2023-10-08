@@ -5,7 +5,7 @@ import PaperIcon from "../../assets/images/icon-paper.svg";
 import ScissorsIcon from "../../assets/images/icon-scissors.svg";
 import LizardIcon from "../../assets/images/icon-lizard.svg";
 import SpockIcon from "../../assets/images/icon-spock.svg";
-import "./action-item.scss";
+import "./ActionItem.scss";
 
 interface Props {
   action: Action;

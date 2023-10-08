@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./score.scss";
+import "./Score.scss";
 
 const Score: FC = () => {
   return (

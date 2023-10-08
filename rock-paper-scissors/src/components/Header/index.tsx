@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Score from "../Score";
 import Logo from "../../assets/images/logo-bonus.svg";
-import "./header.scss";
+import "./Header.scss";
 
 const Header: FC = () => {
   return (

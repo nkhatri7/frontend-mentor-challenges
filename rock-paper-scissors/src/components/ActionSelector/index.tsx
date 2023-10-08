@@ -1,7 +1,7 @@
 import { FC } from "react";
-import "./action-selector.scss";
 import { Action } from "../../types";
 import ActionItem from "../ActionItem";
+import "./ActionSelector.scss";
 
 const actions: Action[] = Object.values(Action);
 
