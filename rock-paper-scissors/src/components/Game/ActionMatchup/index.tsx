@@ -34,10 +34,6 @@ const ActionMatchup: FC = () => {
     }
   }, [result, updateScore]);
 
-  // useEffect(() => {
-  //   console.log("score in matchup component: " + score);
-  // }, [score]);
-
   return (
     <div className="action-matchup-container">
       <section className="action-matchup">
