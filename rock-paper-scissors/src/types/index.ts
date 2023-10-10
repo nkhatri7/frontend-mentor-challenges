@@ -5,3 +5,5 @@ export enum Action {
   LIZARD = "Lizard",
   SPOCK = "Spock",
 }
+export type GameState = "not-started" | "started" | "finished";
+export type Result = "win" | "loss" | "draw";

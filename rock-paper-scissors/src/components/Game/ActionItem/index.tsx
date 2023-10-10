@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { Action } from "../../types";
-import RockIcon from "../../assets/images/icon-rock.svg";
-import PaperIcon from "../../assets/images/icon-paper.svg";
-import ScissorsIcon from "../../assets/images/icon-scissors.svg";
-import LizardIcon from "../../assets/images/icon-lizard.svg";
-import SpockIcon from "../../assets/images/icon-spock.svg";
+import { Action } from "../../../types";
+import RockIcon from "../../../assets/images/icon-rock.svg";
+import PaperIcon from "../../../assets/images/icon-paper.svg";
+import ScissorsIcon from "../../../assets/images/icon-scissors.svg";
+import LizardIcon from "../../../assets/images/icon-lizard.svg";
+import SpockIcon from "../../../assets/images/icon-spock.svg";
 import "./ActionItem.scss";
 
 interface Props {
@@ -12,11 +12,15 @@ interface Props {
   onClick?: () => void;
 }
 
-const ActionItem: FC<Props> = ({ action }) => {
+const ActionItem: FC<Props> = ({ action, onClick }) => {
   return (
-    <div className="item" data-action={action}>
-      <div className="item-inner">
-        <img src={getActionIcon(action)} alt={action} className="item-icon" />
+    <div className="action-item" data-action={action} onClick={onClick}>
+      <div className="action-item-inner">
+        <img
+          src={getActionIcon(action)}
+          alt={action}
+          className="action-item-icon"
+        />
       </div>
     </div>
   );

@@ -1,11 +1,14 @@
 import { FC } from "react";
+import { useGameData } from "../../context/GameContext";
 import "./Score.scss";
 
 const Score: FC = () => {
+  const { score } = useGameData();
+
   return (
     <section className="score-container">
       <p className="score-title">SCORE</p>
-      <span className="score">0</span>
+      <span className="score">{score}</span>
     </section>
   );
 };

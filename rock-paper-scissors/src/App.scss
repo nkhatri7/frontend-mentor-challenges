@@ -10,11 +10,18 @@
   padding-bottom: 40px;
 }
 
+main {
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hidden {
   display: none;
 }
 
-@media screen and (min-width: 900px) and (orientation: landscape) {
+@media screen and (min-width: 1000px) and (orientation: landscape) {
   #root {
     justify-content: flex-start;
   }
