@@ -38,10 +38,13 @@ const ActionMatchup: FC = () => {
     <div className="action-matchup-container">
       <section className="action-matchup">
         <section className="action-selection-container">
-          {userAction
-            ? <ActionItem action={userAction} />
-            : <div className="placeholder-action" />
-          }
+          {userAction ? (
+            <div className="action-item-container">
+              <ActionItem action={userAction} />
+            </div>
+          ) : (
+            <div className="placeholder-action" />
+          )}
           <p className="action-owner">YOU PICKED</p>
         </section>
         {result && (
@@ -50,10 +53,13 @@ const ActionMatchup: FC = () => {
           </div>
         )}
         <section className="action-selection-container">
-          {botAction
-            ? <ActionItem action={botAction} />
-            : <div className="placeholder-action" />
-          }
+          {botAction ? (
+            <div className="action-item-container">
+              <ActionItem action={botAction} />
+            </div>
+          ) : (
+            <div className="placeholder-action" />
+          )}
           <p className="action-owner">THE HOUSE PICKED</p>
         </section>
       </section>
