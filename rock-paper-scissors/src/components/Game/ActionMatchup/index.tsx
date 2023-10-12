@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Result } from "../../../types";
 import { useGameData } from "../../../context/GameContext";
 import { getRandomAction, getResult } from "../../../utils";
@@ -14,6 +14,9 @@ const ActionMatchup: FC = () => {
     updateScore,
   } = useGameData();
   const [result, setResult] = useState<Result | null>(null);
+
+  const userActionItemRef = useRef<HTMLDivElement>(null);
+  const botActionItemRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (userAction && !botAction) {
@@ -34,12 +37,26 @@ const ActionMatchup: FC = () => {
     }
   }, [result, updateScore]);
 
+  useEffect(() => {
+    if (result) {
+      const winnerDiv = document.createElement("div");
+      winnerDiv.classList.add("action-item-winner");
+      if (result === "win") {
+        // userActionItemRef.current?.classList.add("action-item-winner");
+        userActionItemRef.current?.appendChild(winnerDiv);
+      } else if (result === "loss") {
+        // botActionItemRef.current?.classList.add("action-item-winner");
+        botActionItemRef.current?.appendChild(winnerDiv);
+      }
+    }
+  }, [result]);
+
   return (
     <div className="action-matchup-container">
       <section className="action-matchup">
         <section className="action-selection-container">
           {userAction ? (
-            <div className="action-item-container">
+            <div className="action-item-container" ref={userActionItemRef}>
               <ActionItem action={userAction} />
             </div>
           ) : (
@@ -54,7 +71,7 @@ const ActionMatchup: FC = () => {
         )}
         <section className="action-selection-container">
           {botAction ? (
-            <div className="action-item-container">
+            <div className="action-item-container" ref={botActionItemRef}>
               <ActionItem action={botAction} />
             </div>
           ) : (
