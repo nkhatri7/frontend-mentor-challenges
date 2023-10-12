@@ -42,10 +42,8 @@ const ActionMatchup: FC = () => {
       const winnerDiv = document.createElement("div");
       winnerDiv.classList.add("action-item-winner");
       if (result === "win") {
-        // userActionItemRef.current?.classList.add("action-item-winner");
         userActionItemRef.current?.appendChild(winnerDiv);
       } else if (result === "loss") {
-        // botActionItemRef.current?.classList.add("action-item-winner");
         botActionItemRef.current?.appendChild(winnerDiv);
       }
     }
