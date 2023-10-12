@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85vw;
+  max-width: 700px;
+  border: 3px solid var(--header-outline);
+  border-radius: 10px;
+  padding: clamp(10px, 2.6vw, 20px);
+}
+
+.logo {
+  padding-left: 10px;
+  width: clamp(60px, 13.5vw, 110px);
+}

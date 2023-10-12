@@ -1,0 +1,36 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+main {
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) and (orientation: landscape) {
+  #root {
+    justify-content: flex-start;
+  }
+  main {
+    margin-top: 30px;
+  }
+  footer {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  }
+}

@@ -1,0 +1,42 @@
+.action-selector {
+  position: relative;
+  background: url(../../../assets/images/bg-pentagon.svg) no-repeat center center;
+  background-size: 80%;
+  height: clamp(315px, 84vw, 475px);
+  width: clamp(315px, 84vw, 475px);
+}
+
+.action-selector .action-item {
+  position: absolute;
+  cursor: pointer;
+  &[data-action="Rock"] {
+    bottom: -3%;
+    right: 10%;
+  }
+  &[data-action="Paper"] {
+    top: 27%;
+    right: -3%;
+  }
+  &[data-action="Scissors"] {
+    top: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &[data-action="Lizard"] {
+    bottom: -3%;
+    left: 13%;
+  }
+  &[data-action="Spock"] {
+    top: 27%;
+    left: -3%;
+  }
+  // Onclick effect - button press down
+  &:active {
+    transform: translateY(5px);
+    &[data-action="Scissors"] {
+      transform: translate(-50%, 5px);
+    }
+    box-shadow: none;
+    transition: translate;
+  }
+}
